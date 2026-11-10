@@ -3,6 +3,7 @@ import json
 import re
 from html import escape
 from pathlib import Path
+from datetime import date
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist"
@@ -11,6 +12,7 @@ catalog.sort(key=lambda item: (item["periodEnd"], item["id"]), reverse=True)
 assert catalog and len({item["id"] for item in catalog}) == len(catalog)
 for item in catalog:
     assert re.fullmatch(r"[a-z0-9-]+", item["id"])
+    assert date.fromisoformat(item["periodEnd"]).isoformat() == item["periodEnd"]
     assert (ROOT / "reports" / (item["id"] + ".html")).is_file()
 
 NAV_CSS = """
