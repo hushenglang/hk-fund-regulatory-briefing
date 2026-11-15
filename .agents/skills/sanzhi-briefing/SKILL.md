@@ -53,3 +53,7 @@ description: 制作本项目的香港基金管理监管周报或季报，检索�
 ## 云端执行
 
 每次从 GitHub `main` 读取本 skill 和模板，而非依赖 Mac 路径或当前聊天记忆。GitHub 读取与写入权限、联网检索和运行环境是执行前提；缺失时明确报告，不绕过授权。此 skill 描述方法，本身不创建定时任务、不替代授权，也不保证任务平台一定提供写入能力。
+
+## 三份 HTML 输出
+
+每期原稿仍为 reports/<id>.html，包含汇总内容。运行 scripts/build_home.py 时自动派生 dist/archive/<id>-regulatory.html 与 dist/archive/<id>-cases.html；scripts/validate_site.py 检查拆分完整性。只让最新汇总进入 index 及历史导航，不将专版加入 reports/catalog.json、不新增重复期刊记录。原稿的两个栏目分别明确命名为“监管更新”和“判例及执法”，推荐 section id 为 regulatory 与 cases，以便自动拆分。专版完整保留本栏原文及来源；法律 AI 和跨栏目摘要仅留在汇总版。

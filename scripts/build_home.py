@@ -72,3 +72,6 @@ for item in catalog:
 (DIST / "index.html").write_text(render(catalog[0], homepage=True))
 (DIST / "catalog.json").write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + "\n")
 print(f"Built homepage: {catalog[0]['id']}; {len(catalog)} archived reports")
+
+from split_reports import build_split_reports
+build_split_reports(ROOT, DIST, catalog)

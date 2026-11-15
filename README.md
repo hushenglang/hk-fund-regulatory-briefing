@@ -47,3 +47,7 @@ python3 scripts/build_home.py
 上传到本地文件夹而未提交到 GitHub 不会触发发布。本流程自动发布已有文稿，不自动研究或撰写新闻。原 Sites 网站独立托管，不随 GitHub Pages 工作流更新。
 
 当前收录 2026.10.13–10.19 周报及 2026 Q3 季度简报；季度简报包含 13 项监管更新和 17 项判例及执法活动。原始 Word 文件及内部工作文档不属于网站源码。
+
+## 三份输出
+
+每期保留汇总版 `dist/archive/<id>.html`，并自动生成 `dist/archive/<id>-regulatory.html`（监管更新）及 `dist/archive/<id>-cases.html`（判例及执法）。`dist/index.html` 仅展示最新汇总版，历史菜单也只列汇总版。两份专版保留完整对应栏目、来源及表格，独立打开/打印，不加入首页导航；法律 AI 与跨栏目摘要留在汇总版。运行原构建命令即可生成全部输出。

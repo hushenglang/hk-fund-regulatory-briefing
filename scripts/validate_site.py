@@ -51,3 +51,17 @@ assert homepage == latest.replace('href="../archive/', 'href="archive/'), "Homep
 source_ids = {p.stem for p in (ROOT / "reports").glob("*.html")}
 assert source_ids == {item["id"] for item in catalog}, "Register every report in reports/catalog.json"
 print(f"Validated {len(pages)} pages: latest issue, archive articles, links and anchors")
+
+from split_reports import section_content, Document
+for item in catalog:
+    source = (ROOT / "reports" / (item["id"] + ".html")).read_text()
+    sections = section_content(source)
+    for kind, content in sections.items():
+        output = (DIST / "archive" / f'{item["id"]}-{kind}.html').read_text()
+        for section in content:
+            assert section in output, f"Section content changed: {item['id']} {kind}"
+        unwanted = "cases" if kind == "regulatory" else "regulatory"
+        for section in sections[unwanted]:
+            assert section not in output, f"Other section leaked: {item['id']} {kind}"
+        assert 'archive-picker' not in output, "Section editions must not enter homepage navigation"
+print("Section editions verified: exact content, no other section, independent files")
