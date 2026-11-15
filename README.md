@@ -78,10 +78,10 @@ python3 scripts/build_home.py
 
 ## 四位一体 + 法律AI
 
-工作台第四模块链接至 `intelligence.html`，仅显示香港当天发布的文章，按律所 Insights／全球法律AI分栏，支持来源与关键词筛选，原文在新窗口打开。`data/intelligence.json` 只保存公开标题、原文链接和日期，不转载全文；中文标题可在 `data/intelligence-editorial.json` 维护，未编辑的新文章保留原标题。
+工作台第四模块链接至 `intelligence.html`，显示最近7天（含香港当天）发布的文章，按律所 Insights／全球法律AI分栏，支持来源与关键词筛选，原文在新窗口打开。`data/intelligence.json` 只保存公开标题、原文链接和日期，不转载全文；中文标题可在 `data/intelligence-editorial.json` 维护，未编辑的新文章保留原标题。
 
-每日由 `.github/workflows/daily-intelligence.yml` 在香港时间07:00（UTC前一天23:00）云端执行，无需电脑在线或模型密钥。GitHub 定时任务可能排队延迟。读取用户指定的金杜香港前沿观察、美富 Private Funds、Charltons 香港法讯，以及 Harvey、Legora、Artificial Lawyer、LawNext、Legal Futures 的公开资讯。美富动态筛选页使用同一 Private Funds 专题中内嵌的 Insights 数据，不冒充整个网站的全部历史文章。此模块持续收录列表中可读取的近期文章，每来源最多保留100篇；旧文章仅在数据中保留，不显示在当天页面；未注明具体发布日期或只有月份的文章也不进入当天列表。
+每日由 `.github/workflows/daily-intelligence.yml` 在香港时间07:00（UTC前一天23:00）云端执行，无需电脑在线或模型密钥。GitHub 定时任务可能排队延迟。读取用户指定的金杜香港前沿观察、美富 Private Funds、Charltons 香港法讯，以及 Harvey、Legora、Artificial Lawyer、LawNext、Legal Futures 的公开资讯。美富动态筛选页使用同一 Private Funds 专题中内嵌的 Insights 数据，不冒充整个网站的全部历史文章。此模块持续收录列表中可读取的近期文章，每来源最多保留100篇；超出7天的旧文章仅在数据中保留，不显示在页面；未注明具体发布日期或只有月份的文章也不进入列表。
 
-流程：抓取 → URL去重及日期检查 → 保留失败来源旧内容 → 构建并验证 → 提交公开标题数据 → 部署 Pages。所有来源均失败时不覆盖数据、停止发布。部分失败时页面来源状态显示失败，旧文仅保存在数据中，不用旧文填充当天列表；最近检索日期与文章发布日期分开记录，不把抓取日当成新闻日期。行业报道与官方公告分别标注。当天没有更新的栏目隐藏；两个栏目均无更新时隐藏工作台卡片，直接访问资讯页仅显示“今日暂无更新”。页面跨香港午夜后会自动隐藏过期内容。
+流程：抓取 → URL去重及日期检查 → 保留失败来源旧内容 → 构建并验证 → 提交公开标题数据 → 部署 Pages。所有来源均失败时不覆盖数据、停止发布。部分失败时页面来源状态显示失败，继续展示近7天内已收录的文章，不展示超期旧文；最近检索日期与文章发布日期分开记录，不把抓取日当成新闻日期。行业报道与官方公告分别标注。工作台模块及详情页的两个栏目固定保留，即使数量为0也展示入口及“近7天暂无更新”的提示。页面跨香港午夜后会重新计算7天窗口，移除超期文章。
 
 手动刷新：`python3 scripts/refresh_intelligence.py`；随后按现有构建流程生成全站。也可在 GitHub Actions 手动运行 Daily Insights and Legal AI。日常构建读取已保存的数据，不联网抓取，因此现有周报、季报流程不会因外部资讯站点暂时故障而中断。

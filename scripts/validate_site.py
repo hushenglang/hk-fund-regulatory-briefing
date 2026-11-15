@@ -85,7 +85,8 @@ intelligence_html=(DIST/'intelligence.html').read_text()
 from build_intelligence import intelligence_data
 today_items=intelligence_data(ROOT)['items']
 assert intelligence_html.count('class="news-item"')==len(today_items)
-assert ('intelligence.html?v=' in (DIST/'dashboard.html').read_text())==bool(today_items)
-assert all(i['published']==intelligence_data(ROOT)['displayDate'] for i in today_items)
+assert ('intelligence.html?v=' in (DIST/'dashboard.html').read_text())==True
+window=intelligence_data(ROOT)
+assert all(window['windowStart']<=i['published']<=window['displayDate'] for i in today_items)
 assert not any('intelligence' in i['id'] for i in catalog), 'Do not put daily feeds in report archives'
 print(f'Intelligence validated: {len(urls)} unique sourced headlines')
