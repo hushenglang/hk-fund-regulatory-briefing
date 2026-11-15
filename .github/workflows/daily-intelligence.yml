@@ -1,0 +1,67 @@
+name: Daily Insights and Legal AI
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - scripts/refresh_intelligence.py
+      - .github/workflows/daily-intelligence.yml
+  schedule:
+    - cron: '0 23 * * *' # 07:00 Asia/Hong_Kong; GitHub may queue scheduled jobs.
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  refresh-and-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+      pages: read
+    steps:
+      - name: Check out current main
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Fetch public Insights and legal AI headlines
+        run: python3 scripts/refresh_intelligence.py
+      - name: Test collector and build all pages
+        run: |
+          python3 -m unittest discover -s tests
+          python3 scripts/build_home.py
+          python3 scripts/validate_site.py
+      - name: Save public headline data
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/intelligence.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Refresh daily Insights and legal AI headlines'
+            git push origin HEAD:main
+          fi
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload validated website
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+  deploy:
+    needs: refresh-and-build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish daily update
+        id: deployment
+        uses: actions/deploy-pages@v4

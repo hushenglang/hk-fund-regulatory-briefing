@@ -81,3 +81,6 @@ build_dashboard(ROOT, DIST, catalog)
 
 from build_compliance import build_compliance
 build_compliance(ROOT, DIST)
+
+from build_intelligence import build_intelligence
+build_intelligence(ROOT, DIST)

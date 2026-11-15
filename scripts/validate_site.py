@@ -67,3 +67,22 @@ for item in catalog:
             assert section not in output, f"Other section leaked: {item['id']} {kind}"
         assert 'archive-picker' not in output, "Section editions must not enter homepage navigation"
 print("Section editions verified: exact content, no other section, independent files")
+
+# Intelligence data must remain attributable and separate from formal reports.
+import re
+from urllib.parse import urlsplit
+intelligence=json.loads((ROOT/'data/intelligence.json').read_text())
+sources={s['id']:s for s in intelligence['sources']}
+urls=set()
+for item in intelligence['items']:
+    assert item['source'] in sources and item['kind']==sources[item['source']]['kind']
+    assert item['title'].strip() and urlsplit(item['url']).scheme=='https'
+    assert item['url'] not in urls, 'Duplicate intelligence article URL'
+    urls.add(item['url'])
+    assert not item.get('published') or re.fullmatch(r'\d{4}-\d{2}(-\d{2})?',item['published'])
+    assert not item.get('published') or item['published']<=intelligence['updatedAt'][:10], 'Future news date'
+intelligence_html=(DIST/'intelligence.html').read_text()
+assert intelligence_html.count('class="news-item"')==len(intelligence['items'])
+assert 'intelligence.html?v=' in (DIST/'dashboard.html').read_text()
+assert not any('intelligence' in i['id'] for i in catalog), 'Do not put daily feeds in report archives'
+print(f'Intelligence validated: {len(urls)} unique sourced headlines')

@@ -75,3 +75,13 @@ python3 scripts/build_home.py
 发布范围：用户已确认新版11项定期监控与监管日历采用一致的展示及公开发布方式。原频率、责任方、监控范围、输出文件和升级条件随清单展示；原始DOCX不上传。
 
 监管更新专版的大标题统一为“监管更新-香港基金管理行业”，官方新闻链接默认在新标签页打开。
+
+## 四位一体 + 法律AI
+
+工作台第四模块链接至 `intelligence.html`，按律所 Insights／全球法律AI分栏，支持来源、发布日期与关键词筛选，原文在新窗口打开。`data/intelligence.json` 只保存公开标题、原文链接和日期，不转载全文；中文标题可在 `data/intelligence-editorial.json` 维护，未编辑的新文章保留原标题。
+
+每日由 `.github/workflows/daily-intelligence.yml` 在香港时间07:00（UTC前一天23:00）云端执行，无需电脑在线或模型密钥。GitHub 定时任务可能排队延迟。读取用户指定的金杜香港前沿观察、美富 Private Funds、Charltons 香港法讯，以及 Harvey、Legora、Artificial Lawyer、LawNext、Legal Futures 的公开资讯。美富动态筛选页使用同一 Private Funds 专题中内嵌的 Insights 数据，不冒充整个网站的全部历史文章。此模块持续收录列表中可读取的近期文章，每来源最多保留100篇；初次收录可能包含较早文章，按原日期显示。
+
+流程：抓取 → URL去重及日期检查 → 保留失败来源旧内容 → 构建并验证 → 提交公开标题数据 → 部署 Pages。所有来源均失败时不覆盖数据、停止发布。部分失败时页面来源状态显示失败，保留旧文；最近检索日期不表示每篇文章都是当日新闻。原文未标明日期时不编造日期，只有月份时不补具体日。行业报道与官方公告分别标注。
+
+手动刷新：`python3 scripts/refresh_intelligence.py`；随后按现有构建流程生成全站。也可在 GitHub Actions 手动运行 Daily Insights and Legal AI。日常构建读取已保存的数据，不联网抓取，因此现有周报、季报流程不会因外部资讯站点暂时故障而中断。
