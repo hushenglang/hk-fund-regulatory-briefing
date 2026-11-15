@@ -75,3 +75,6 @@ print(f"Built homepage: {catalog[0]['id']}; {len(catalog)} archived reports")
 
 from split_reports import build_split_reports
 build_split_reports(ROOT, DIST, catalog)
+
+from build_dashboard import build_dashboard
+build_dashboard(ROOT, DIST, catalog)

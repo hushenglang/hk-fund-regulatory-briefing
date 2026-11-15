@@ -51,3 +51,9 @@ python3 scripts/build_home.py
 ## 三份输出
 
 每期保留汇总版 `dist/archive/<id>.html`，并自动生成 `dist/archive/<id>-regulatory.html`（监管更新）及 `dist/archive/<id>-cases.html`（判例及执法）。`dist/index.html` 仅展示最新汇总版，历史菜单也只列汇总版。两份专版保留完整对应栏目、来源及表格，独立打开/打印，不加入首页导航；法律 AI 与跨栏目摘要留在汇总版。运行原构建命令即可生成全部输出。
+
+## Dashboard
+
+`dist/dashboard.html` 是独立的合规工作台，不替换 `index.html`。每次构建从目录中选择报告期最新的周报，自动提取两栏各前三项标题及首段要点，显示完整栏目条数，并跳转到当期独立专版。季度报告不会取代 dashboard 的周报来源。
+
+`templates/dashboard.html` 管理三个模块的布局；`scripts/build_dashboard.py` 管理数据提取。“合规清单提醒”目前仅为待接入位置，没有虚构清单、期限或办理状态，收到 Word 后再实现。
