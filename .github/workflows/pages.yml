@@ -21,6 +21,8 @@ jobs:
     steps:
       - name: Check out source
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
       - name: Generate latest homepage and archives
         run: python3 scripts/build_home.py
       - name: Validate generated site

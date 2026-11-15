@@ -1,5 +1,10 @@
 """Build an independent dashboard from the latest weekly report's sections."""
 import re
+import shutil
+import os
+import subprocess
+from datetime import datetime
+from zoneinfo import ZoneInfo
 from html import escape, unescape
 from split_reports import Document, section_content
 from build_compliance import compliance_payload
@@ -49,6 +54,13 @@ def build_dashboard(root, dist, catalog):
         raise ValueError('Dashboard requires a weekly report')
     sections = section_content((root / 'reports' / (weekly['id'] + '.html')).read_text())
     data = {kind: extract_highlights(content, kind) for kind, content in sections.items()}
+    revision = 'HEAD' if os.environ.get('GITHUB_ACTIONS') else 'origin/main'
+    try:
+        timestamp = subprocess.check_output(['git', 'log', revision, '-1', '--format=%cI', '--', f'reports/{weekly["id"]}.html'], cwd=root, stderr=subprocess.DEVNULL, text=True).strip()
+        updated = datetime.fromisoformat(timestamp).astimezone(ZoneInfo('Asia/Hong_Kong')).date().isoformat()
+        updated_label = updated.replace('-', '.')
+    except (subprocess.CalledProcessError, ValueError, FileNotFoundError):
+        updated, updated_label = '', '更新日期待确认'
     cards = []
     icons = {
         'regulatory': '<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6m-6 4h6m-6 4h4"/>',
@@ -60,12 +72,14 @@ def build_dashboard(root, dist, catalog):
             rows.append(f'<li><span class="headline" title="{escape(title, quote=True)}">{escape(title)}</span></li>')
         count = len(data[kind])
         cards.append(f'''<a class="module active" href="archive/{weekly['id']}-{kind}.html" aria-label="查看最新周报的{label}，共{count}项">
-<div class="module-top"><span class="module-icon" aria-hidden="true"><svg viewBox="0 0 24 24">{icons[kind]}</svg></span><h2>{label}</h2><span class="status">已更新</span></div>
+<div class="module-top"><span class="module-icon" aria-hidden="true"><svg viewBox="0 0 24 24">{icons[kind]}</svg></span><h2>{label}</h2><time class="status update-date" datetime="{updated}" title="内容更新日期（香港时间）">{updated_label}</time></div>
 <div class="metric"><strong>{count}</strong><span>项</span></div><p class="metric-note">本期收录</p>
 <p class="section-label">要点速览</p><ul class="highlights">{''.join(rows)}</ul><div class="module-footer"><span>进入模块</span><span aria-hidden="true">→</span></div></a>''')
     template = (root / 'templates/dashboard.html').read_text()
     for key, value in {'ISSUE_LABEL': escape(weekly['label']), 'ISSUE_ID': weekly['id'], 'MODULES': ''.join(cards)}.items():
         template = template.replace('{{' + key + '}}', value)
-    template = template.replace('</body>', compliance_payload(root) + '<script src="assets/compliance.js"></script></body>')
+    template = template.replace('</body>', compliance_payload(root) + '<script src="assets/compliance.js"></script><script src="assets/daily-todos.js"></script></body>')
+    (dist / 'assets').mkdir(exist_ok=True)
+    shutil.copyfile(root / 'assets/daily-todos.js', dist / 'assets/daily-todos.js')
     (dist / 'dashboard.html').write_text(template)
     print(f'Built dashboard from latest weekly report: {weekly["id"]}')
