@@ -56,4 +56,10 @@ python3 scripts/build_home.py
 
 `dist/dashboard.html` 是独立的合规工作台，不替换 `index.html`。每次构建从目录中选择报告期最新的周报，自动提取两栏各前两项简短标题，显示完整栏目条数，并跳转到当期独立专版。季度报告不会取代 dashboard 的周报来源。
 
-`templates/dashboard.html` 管理三个模块的布局；`scripts/build_dashboard.py` 管理数据提取。“合规清单提醒”目前仅为待接入位置，没有虚构清单、期限或办理状态，收到 Word 后再实现。
+`templates/dashboard.html` 管理三个模块的布局；`scripts/build_dashboard.py` 管理数据提取。“合规清单提醒”已接入用户提供的2026年度文档，支持查看只读清单、状态筛选与搜索。
+
+## 合规清单提醒
+
+`data/compliance-2026.json` 保存用户提供清单的18项事项、原文日期、频率、责任方及原文状态；原始DOCX不进入网站。`scripts/build_compliance.py` 生成 `dist/compliance.html`，`assets/compliance.js` 根据浏览器当前香港日期计算提醒，提供只读筛选与搜索；仪表板模块3链接到清单。
+
+月度FRR不将未注明月份的“已完成”沿用到本月，单列“待确认”；其余年度/半年度状态按文档保留。12月31日起开始的PI确认按启动日显示。涉及财年后若干个月的期限保留原条件，不推定日期。年份变更时提示需要新年度资料，不自动继承完成情况。用户已明确确认将此2026年度清单内容按原文公开发布到现有仓库和Pages；原始DOCX不上传。此授权不扩展到其他内部文档。

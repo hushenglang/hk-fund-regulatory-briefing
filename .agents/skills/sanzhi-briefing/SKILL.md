@@ -58,4 +58,4 @@ description: 制作本项目的香港基金管理监管周报或季报，检索�
 
 每期原稿仍为 reports/<id>.html，包含汇总内容。运行 scripts/build_home.py 时自动派生 dist/archive/<id>-regulatory.html 与 dist/archive/<id>-cases.html；scripts/validate_site.py 检查拆分完整性。只让最新汇总进入 index 及历史导航，不将专版加入 reports/catalog.json、不新增重复期刊记录。原稿的两个栏目分别明确命名为“监管更新”和“判例及执法”，推荐 section id 为 regulatory 与 cases，以便自动拆分。专版完整保留本栏原文及来源；法律 AI 和跨栏目摘要仅留在汇总版。
 
-独立工作台 dashboard.html 由同一构建流程从最新周报自动生成，展示“监管更新”“判例及执法”的前两项标题、条数和状态并链接到专版。季报不替代工作台的周报来源。index.html 继续展示最新汇总。“合规清单提醒”模块等用户提供 Word 后再接入，不编造提醒内容。
+独立工作台 dashboard.html 由同一构建流程从最新周报自动生成，展示“监管更新”“判例及执法”的前两项标题、条数和状态并链接到专版。季报不替代工作台的周报来源。index.html 继续展示最新汇总。“合规清单提醒”已接入 data/compliance-2026.json；只读显示文档状态，月度FRR未注明月份时单列待确认，不自动续认完成或滚动年度。用户已明确确认此2026年度清单内容可按原文在现有公开仓库与Pages发布；保留其数据与功能，原始DOCX不上传，此授权不扩展到其他内部资料。

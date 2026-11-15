@@ -2,6 +2,7 @@
 import re
 from html import escape, unescape
 from split_reports import Document, section_content
+from build_compliance import compliance_payload
 
 
 def plain(html):
@@ -65,5 +66,6 @@ def build_dashboard(root, dist, catalog):
     template = (root / 'templates/dashboard.html').read_text()
     for key, value in {'ISSUE_LABEL': escape(weekly['label']), 'ISSUE_ID': weekly['id'], 'MODULES': ''.join(cards)}.items():
         template = template.replace('{{' + key + '}}', value)
+    template = template.replace('</body>', compliance_payload(root) + '<script src="assets/compliance.js"></script></body>')
     (dist / 'dashboard.html').write_text(template)
     print(f'Built dashboard from latest weekly report: {weekly["id"]}')

@@ -1,0 +1,293 @@
+{
+  "year": 2026,
+  "source": "Compliance Calender 2026.docx",
+  "items": [
+    {
+      "id": "c2026-01",
+      "category": "开曼基金",
+      "title": "开曼私募基金CIMA年费缴付 / 1. 首基金；2. Dawanqu SPC",
+      "deadlineText": "1月15日",
+      "frequency": "年度",
+      "owner": "运营部/法规部",
+      "participants": "财务部",
+      "sourceStatus": "已完成",
+      "dates": [
+        "2026-01-15"
+      ],
+      "dateKind": "due",
+      "monthlyDay": null,
+      "conditional": false
+    },
+    {
+      "id": "c2026-02",
+      "category": "开曼基金",
+      "title": "开曼CIMA注册董事年费",
+      "deadlineText": "1月15日",
+      "frequency": "年度",
+      "owner": "运营部/法规部",
+      "participants": "-",
+      "sourceStatus": "已完成",
+      "dates": [
+        "2026-01-15"
+      ],
+      "dateKind": "due",
+      "monthlyDay": null,
+      "conditional": false
+    },
+    {
+      "id": "c2026-03",
+      "category": "员工交易",
+      "title": "半年度个人交易申报",
+      "deadlineText": "1月21日/7月21日",
+      "frequency": "半年度",
+      "owner": "法规部/人力部",
+      "participants": "所有员工",
+      "sourceStatus": "已完成",
+      "dates": [
+        "2026-01-21",
+        "2026-07-21"
+      ],
+      "dateKind": "due",
+      "monthlyDay": null,
+      "conditional": false
+    },
+    {
+      "id": "c2026-04",
+      "category": "财务资源",
+      "title": "香港证监会财务申报表格（FRR）",
+      "deadlineText": "每月21日",
+      "frequency": "月度",
+      "owner": "财务部/RO",
+      "participants": "-",
+      "sourceStatus": "已完成",
+      "dates": [],
+      "dateKind": "due",
+      "monthlyDay": 21,
+      "conditional": false
+    },
+    {
+      "id": "c2026-05",
+      "category": "开曼公司",
+      "title": "开曼公司周年申报及开曼公司注册处年费支付",
+      "deadlineText": "1月31日",
+      "frequency": "年度",
+      "owner": "运营部/法规部",
+      "participants": "-",
+      "sourceStatus": "已完成",
+      "dates": [
+        "2026-01-31"
+      ],
+      "dateKind": "due",
+      "monthlyDay": null,
+      "conditional": false
+    },
+    {
+      "id": "c2026-06",
+      "category": "经济实质",
+      "title": "开曼经济实质合规 - 通知义务（ESN）",
+      "deadlineText": "1月31日",
+      "frequency": "年度",
+      "owner": "法规部",
+      "participants": "Ogier/Maples/运营部/财务部",
+      "sourceStatus": "已完成",
+      "dates": [
+        "2026-01-31"
+      ],
+      "dateKind": "due",
+      "monthlyDay": null,
+      "conditional": false
+    },
+    {
+      "id": "c2026-07",
+      "category": "财务资源",
+      "title": "向香港证监会提交经审核账目（& Revised Annual FRR） / Compliance Report from Auditor/ADD/Analysis of Client Assets for Associated Entity",
+      "deadlineText": "4月30日",
+      "frequency": "年度",
+      "owner": "财务部/RO",
+      "participants": "Auditor",
+      "sourceStatus": "已完成",
+      "dates": [
+        "2026-04-30"
+      ],
+      "dateKind": "due",
+      "monthlyDay": null,
+      "conditional": false
+    },
+    {
+      "id": "c2026-08",
+      "category": "OFC申报",
+      "title": "向香港证监会提交OFC年度财务报表",
+      "deadlineText": "4月30日",
+      "frequency": "年度",
+      "owner": "RO",
+      "participants": "法规部//财务部/Auditor",
+      "sourceStatus": "已完成",
+      "dates": [
+        "2026-04-30"
+      ],
+      "dateKind": "due",
+      "monthlyDay": null,
+      "conditional": false
+    },
+    {
+      "id": "c2026-09",
+      "category": "SFC监管事项",
+      "title": "香港证监会业务及风险管理问卷（BRMQ）",
+      "deadlineText": "4月30日",
+      "frequency": "年度",
+      "owner": "法规部",
+      "participants": "-",
+      "sourceStatus": "已完成",
+      "dates": [
+        "2026-04-30"
+      ],
+      "dateKind": "due",
+      "monthlyDay": null,
+      "conditional": false
+    },
+    {
+      "id": "c2026-10",
+      "category": "开曼基金",
+      "title": "财年于2025年12月31日结束的CIMA注册公募基金和私募基金向CIMA提交经审核账目和FAR Form",
+      "deadlineText": "6月30日",
+      "frequency": "年度",
+      "owner": "Fund Admin/Auditor",
+      "participants": "财务部/运营部",
+      "sourceStatus": "已完成",
+      "dates": [
+        "2026-06-30"
+      ],
+      "dateKind": "due",
+      "monthlyDay": null,
+      "conditional": false
+    },
+    {
+      "id": "c2026-11",
+      "category": "税务申报",
+      "title": "BVI FATCA及CRS申报",
+      "deadlineText": "6月30日",
+      "frequency": "年度",
+      "owner": "财务部/PWC",
+      "participants": "—",
+      "sourceStatus": "已完成",
+      "dates": [
+        "2026-06-30"
+      ],
+      "dateKind": "due",
+      "monthlyDay": null,
+      "conditional": false
+    },
+    {
+      "id": "c2026-12",
+      "category": "经济实质",
+      "title": "财年于12月31日结束的BVI实体经济实质报告",
+      "deadlineText": "6月30日，或财年后6个月内",
+      "frequency": "年度",
+      "owner": "法规部",
+      "participants": "财务部/Conpak",
+      "sourceStatus": "已完成",
+      "dates": [
+        "2026-06-30"
+      ],
+      "dateKind": "due",
+      "monthlyDay": null,
+      "conditional": true
+    },
+    {
+      "id": "c2026-13",
+      "category": "SFC监管事项",
+      "title": "香港证监会年度申报",
+      "deadlineText": "7月30日",
+      "frequency": "年度",
+      "owner": "法规部",
+      "participants": "公司、持牌人士",
+      "sourceStatus": "已完成",
+      "dates": [
+        "2026-07-30"
+      ],
+      "dateKind": "due",
+      "monthlyDay": null,
+      "conditional": false
+    },
+    {
+      "id": "c2026-14",
+      "category": "税务申报",
+      "title": "开曼金融机构(Financial Institutions) FATCA及CRS申报 ",
+      "deadlineText": "7月31日",
+      "frequency": "年度",
+      "owner": "Fund Admin/PWC",
+      "participants": "-",
+      "sourceStatus": "已完成",
+      "dates": [
+        "2026-07-31"
+      ],
+      "dateKind": "due",
+      "monthlyDay": null,
+      "conditional": false
+    },
+    {
+      "id": "c2026-15",
+      "category": "税务申报",
+      "title": "开曼2025财年 CRS Compliance Form ",
+      "deadlineText": "9月15日",
+      "frequency": "年度",
+      "owner": "财务部/PWC",
+      "participants": "—",
+      "sourceStatus": "已完成",
+      "dates": [
+        "2026-09-15"
+      ],
+      "dateKind": "due",
+      "monthlyDay": null,
+      "conditional": false
+    },
+    {
+      "id": "c2026-16",
+      "category": "经济实质",
+      "title": "开曼经济实质合规 - 报告义务（ESR）",
+      "deadlineText": "12月31日，或财年后12个月内",
+      "frequency": "年度",
+      "owner": "法规部",
+      "participants": "Ogier/Maples/运营部/财务部",
+      "sourceStatus": "待进行",
+      "dates": [
+        "2026-12-31"
+      ],
+      "dateKind": "due",
+      "monthlyDay": null,
+      "conditional": true
+    },
+    {
+      "id": "c2026-17",
+      "category": "SFC监管事项",
+      "title": "香港证监会持续专业培训（CPT）",
+      "deadlineText": "12月31日",
+      "frequency": "年度",
+      "owner": "法规部",
+      "participants": "持牌人士",
+      "sourceStatus": "待进行",
+      "dates": [
+        "2026-12-31"
+      ],
+      "dateKind": "due",
+      "monthlyDay": null,
+      "conditional": false
+    },
+    {
+      "id": "c2026-18",
+      "category": "投资者分类",
+      "title": "专业投资者年度确认",
+      "deadlineText": "12月31日起开始",
+      "frequency": "年度",
+      "owner": "法规部",
+      "participants": "运营部",
+      "sourceStatus": "待进行",
+      "dates": [
+        "2026-12-31"
+      ],
+      "dateKind": "start",
+      "monthlyDay": null,
+      "conditional": false
+    }
+  ]
+}

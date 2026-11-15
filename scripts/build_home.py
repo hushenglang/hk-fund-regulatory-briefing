@@ -78,3 +78,6 @@ build_split_reports(ROOT, DIST, catalog)
 
 from build_dashboard import build_dashboard
 build_dashboard(ROOT, DIST, catalog)
+
+from build_compliance import build_compliance
+build_compliance(ROOT, DIST)
