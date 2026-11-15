@@ -7,7 +7,7 @@ from datetime import datetime
 from zoneinfo import ZoneInfo
 from html import escape, unescape
 from split_reports import Document, section_content
-from build_compliance import compliance_payload
+from build_compliance import compliance_payload, compliance_version, compliance_script
 
 
 def plain(html):
@@ -78,7 +78,8 @@ def build_dashboard(root, dist, catalog):
     template = (root / 'templates/dashboard.html').read_text()
     for key, value in {'ISSUE_LABEL': escape(weekly['label']), 'ISSUE_ID': weekly['id'], 'MODULES': ''.join(cards)}.items():
         template = template.replace('{{' + key + '}}', value)
-    template = template.replace('</body>', compliance_payload(root) + '<script src="assets/compliance.js"></script><script src="assets/daily-todos.js"></script></body>')
+    template = template.replace('href="compliance.html"', f'href="compliance.html?v={compliance_version(root)}"')
+    template = template.replace('</body>', compliance_payload(root) + compliance_script(root) + '<script src="assets/daily-todos.js"></script></body>')
     (dist / 'assets').mkdir(exist_ok=True)
     shutil.copyfile(root / 'assets/daily-todos.js', dist / 'assets/daily-todos.js')
     (dist / 'dashboard.html').write_text(template)
