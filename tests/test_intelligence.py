@@ -59,4 +59,39 @@ class IntelligenceTests(unittest.TestCase):
             with self.assertRaises(RuntimeError):r.refresh(p,fail)
             self.assertEqual(p.read_bytes(),before)
 
+class DailyDisplayTests(unittest.TestCase):
+    def test_only_exact_hong_kong_publication_day_is_included(self):
+        import build_intelligence as b
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder);(root/'data').mkdir()
+            items=[dict(title=str(d),url='https://example.org/'+str(n),published=d) for n,d in enumerate(['2026-11-16','2026-11-15','2026-11-17','2026-11',None])]
+            path=root/'data/intelligence.json';path.write_text(json.dumps({'items':items,'sources':[]}));before=path.read_bytes()
+            selected=b.intelligence_data(root,today='2026-11-16')
+            self.assertEqual([i['published'] for i in selected['items']],['2026-11-16'])
+            self.assertEqual(path.read_bytes(),before)
+
+    def test_empty_day_hides_card_and_article_board(self):
+        import build_intelligence as b
+        root=Path(__file__).resolve().parents[1]
+        data={'items':[],'sources':[],'displayDate':'2026-11-16','updatedAt':'2026-11-16T07:00:00+08:00'}
+        with tempfile.TemporaryDirectory() as folder,patch.object(b,'intelligence_data',return_value=data):
+            dist=Path(folder);(dist/'assets').mkdir();b.build_intelligence(root,dist)
+            self.assertEqual(b.dashboard_card(root),'')
+            html=(dist/'intelligence.html').read_text()
+            self.assertIn('aria-label="资讯列表" hidden',html)
+            self.assertNotIn('class="news-item"',html)
+
+    def test_ai_only_day_hides_empty_insights_tab(self):
+        import build_intelligence as b
+        root=Path(__file__).resolve().parents[1]
+        source=dict(id='harvey',name='Harvey',adapter='harvey',url='https://www.harvey.ai/blog',status='ok',lastSuccessAt='2026-11-16')
+        data={'items':[dict(title='Today AI',url='https://example.org/today',source='harvey',kind='ai',published='2026-11-16')],'sources':[source],'displayDate':'2026-11-16','updatedAt':'2026-11-16T07:00:00+08:00'}
+        with tempfile.TemporaryDirectory() as folder,patch.object(b,'intelligence_data',return_value=data):
+            dist=Path(folder);(dist/'assets').mkdir();b.build_intelligence(root,dist)
+            html=(dist/'intelligence.html').read_text()
+            self.assertIn('data-kind="insights" aria-pressed="false" hidden',html)
+            self.assertIn('data-kind="ai" aria-pressed="true"',html)
+            self.assertEqual(html.count('class="news-item"'),1)
+            self.assertNotIn('date-filter',html)
+
 if __name__=='__main__':unittest.main()

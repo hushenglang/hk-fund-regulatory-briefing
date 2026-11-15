@@ -72,11 +72,14 @@ def build_dashboard(root, dist, catalog):
 <div class="metric"><strong>{count}</strong><span>项</span></div><p class="metric-note">本期收录</p>
 <p class="section-label">要点速览</p><ul class="highlights">{''.join(rows)}</ul><div class="module-footer"><span>进入模块</span><span aria-hidden="true">→</span></div></a>''')
     template = (root / 'templates/dashboard.html').read_text()
-    for key, value in {'ISSUE_LABEL': escape(weekly['label']), 'ISSUE_ID': weekly['id'], 'MODULES': ''.join(cards), 'INTELLIGENCE': dashboard_card(root)}.items():
+    intelligence = dashboard_card(root)
+    template = template.replace('class="grid"', 'class="grid without-intelligence"' if not intelligence else 'class="grid"')
+    for key, value in {'ISSUE_LABEL': escape(weekly['label']), 'ISSUE_ID': weekly['id'], 'MODULES': ''.join(cards), 'INTELLIGENCE': intelligence}.items():
         template = template.replace('{{' + key + '}}', value)
     template = template.replace('href="compliance.html"', f'href="compliance.html?v={compliance_version(root)}"')
-    template = template.replace('</body>', compliance_payload(root) + compliance_script(root) + '<script src="assets/daily-todos.js"></script></body>')
+    template = template.replace('</body>', compliance_payload(root) + compliance_script(root) + '<script src="assets/daily-todos.js"></script><script src="assets/intelligence-dashboard.js"></script></body>')
     (dist / 'assets').mkdir(exist_ok=True)
     shutil.copyfile(root / 'assets/daily-todos.js', dist / 'assets/daily-todos.js')
+    shutil.copyfile(root / 'assets/intelligence-dashboard.js', dist / 'assets/intelligence-dashboard.js')
     (dist / 'dashboard.html').write_text(template)
     print(f'Built dashboard from latest weekly report: {weekly["id"]}')
