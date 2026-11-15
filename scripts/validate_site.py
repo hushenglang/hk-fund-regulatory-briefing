@@ -52,13 +52,15 @@ source_ids = {p.stem for p in (ROOT / "reports").glob("*.html")}
 assert source_ids == {item["id"] for item in catalog}, "Register every report in reports/catalog.json"
 print(f"Validated {len(pages)} pages: latest issue, archive articles, links and anchors")
 
-from split_reports import section_content, Document
+from split_reports import section_content, Document, external_news_links
 for item in catalog:
     source = (ROOT / "reports" / (item["id"] + ".html")).read_text()
     sections = section_content(source)
     for kind, content in sections.items():
         output = (DIST / "archive" / f'{item["id"]}-{kind}.html').read_text()
         for section in content:
+            if kind == 'regulatory':
+                section = external_news_links(section)
             assert section in output, f"Section content changed: {item['id']} {kind}"
         unwanted = "cases" if kind == "regulatory" else "regulatory"
         for section in sections[unwanted]:

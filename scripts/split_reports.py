@@ -70,6 +70,20 @@ def section_content(source):
     return result
 
 
+def external_news_links(html):
+    def update(match):
+        tag = match[0]
+        if not re.search(r'\bhref\s*=\s*[\"\']https?://', tag, re.I):
+            return tag
+        tag = re.sub(r'\s+target\s*=\s*([\"\']).*?\1', '', tag, flags=re.I)
+        rel = re.search(r'\s+rel\s*=\s*([\"\'])(.*?)\1', tag, re.I)
+        tokens = set(rel[2].split()) if rel else set()
+        tokens.update(['noopener', 'noreferrer'])
+        tag = re.sub(r'\s+rel\s*=\s*([\"\']).*?\1', '', tag, flags=re.I)
+        return tag[:-1] + ' target="_blank" rel="' + ' '.join(sorted(tokens)) + '">'
+    return re.sub(r'<a\b[^>]*>', update, html, flags=re.I)
+
+
 def make_edition(source, item, kind, sections):
     title = {'regulatory': '监管更新', 'cases': '判例及执法'}[kind]
     doc = Document(source)
@@ -81,6 +95,8 @@ def make_edition(source, item, kind, sections):
     for node in summaries:
         header = header.replace(doc.html(node), '')
     header = re.sub(r'<span class="subtitle">.*?</span>', f'<span class="subtitle">{title}</span>', header, count=1, flags=re.S)
+    if kind == 'regulatory':
+        header = re.sub(r'<h1\b[^>]*>.*?</h1>', '<h1>监管更新-香港基金管理行业</h1>', header, count=1, flags=re.S)
     css = '''<style id="section-edition">
 .columns,.weekly-content .columns{display:block}.columns>section:first-child>article{display:block;min-height:0}
 .edition-label{font-size:11px;color:var(--muted);margin:15px 0 0}.legacy-section{margin:0!important}
@@ -89,6 +105,8 @@ def make_edition(source, item, kind, sections):
 </style>'''
     head = head.replace('</head>', css + '</head>')
     content = ''.join(sections)
+    if kind == 'regulatory':
+        content = external_news_links(content)
     # A standalone edition identifies itself in the header; keep original section
     # headings, table captions, notes and official sources exactly as authored.
     body = f'<body id="top"><main class="sheet">{header}<p class="edition-label">{escape(item["type"])} · {escape(item["label"])} · {title}专版</p><div class="columns weekly-content">{content}</div><footer class="footer"><p>法律合规部 · {escape(item["label"])} · {title}</p></footer></main></body>'

@@ -1,8 +1,7 @@
 """Build an independent dashboard from the latest weekly report's sections."""
 import re
 import shutil
-import os
-import subprocess
+import hashlib
 from datetime import datetime
 from zoneinfo import ZoneInfo
 from html import escape, unescape
@@ -54,13 +53,8 @@ def build_dashboard(root, dist, catalog):
         raise ValueError('Dashboard requires a weekly report')
     sections = section_content((root / 'reports' / (weekly['id'] + '.html')).read_text())
     data = {kind: extract_highlights(content, kind) for kind, content in sections.items()}
-    revision = 'HEAD' if os.environ.get('GITHUB_ACTIONS') else 'origin/main'
-    try:
-        timestamp = subprocess.check_output(['git', 'log', revision, '-1', '--format=%cI', '--', f'reports/{weekly["id"]}.html'], cwd=root, stderr=subprocess.DEVNULL, text=True).strip()
-        updated = datetime.fromisoformat(timestamp).astimezone(ZoneInfo('Asia/Hong_Kong')).date().isoformat()
-        updated_label = updated.replace('-', '.')
-    except (subprocess.CalledProcessError, ValueError, FileNotFoundError):
-        updated, updated_label = '', '更新日期待确认'
+    updated = datetime.now(ZoneInfo('Asia/Hong_Kong')).date().isoformat()
+    updated_label = updated.replace('-', '.')
     cards = []
     icons = {
         'regulatory': '<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6m-6 4h6m-6 4h4"/>',
@@ -71,8 +65,9 @@ def build_dashboard(root, dist, catalog):
         for title, detail, category in data[kind][:2]:
             rows.append(f'<li><span class="headline" title="{escape(title, quote=True)}">{escape(title)}</span></li>')
         count = len(data[kind])
-        cards.append(f'''<a class="module active" href="archive/{weekly['id']}-{kind}.html" aria-label="查看最新周报的{label}，共{count}项">
-<div class="module-top"><span class="module-icon" aria-hidden="true"><svg viewBox="0 0 24 24">{icons[kind]}</svg></span><h2>{label}</h2><time class="status update-date" datetime="{updated}" title="内容更新日期（香港时间）">{updated_label}</time></div>
+        page_version = hashlib.sha256((dist / 'archive' / f'{weekly["id"]}-{kind}.html').read_bytes()).hexdigest()[:12]
+        cards.append(f'''<a class="module active" href="archive/{weekly['id']}-{kind}.html?v={page_version}" aria-label="查看最新周报的{label}，共{count}项">
+<div class="module-top"><span class="module-icon" aria-hidden="true"><svg viewBox="0 0 24 24">{icons[kind]}</svg></span><h2>{label}</h2><time class="status update-date" datetime="{updated}" title="页面更新日期（香港时间）">{updated_label}</time></div>
 <div class="metric"><strong>{count}</strong><span>项</span></div><p class="metric-note">本期收录</p>
 <p class="section-label">要点速览</p><ul class="highlights">{''.join(rows)}</ul><div class="module-footer"><span>进入模块</span><span aria-hidden="true">→</span></div></a>''')
     template = (root / 'templates/dashboard.html').read_text()
