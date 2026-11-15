@@ -1,6 +1,6 @@
 {
   "year": 2026,
-  "source": "Compliance Calender 2026.docx",
+  "source": "Compliance monitoring checklist 2026final.docx",
   "items": [
     {
       "id": "c2026-01",
@@ -16,7 +16,8 @@
       ],
       "dateKind": "due",
       "monthlyDay": null,
-      "conditional": false
+      "conditional": false,
+      "group": "监管日历"
     },
     {
       "id": "c2026-02",
@@ -32,7 +33,8 @@
       ],
       "dateKind": "due",
       "monthlyDay": null,
-      "conditional": false
+      "conditional": false,
+      "group": "监管日历"
     },
     {
       "id": "c2026-03",
@@ -49,7 +51,8 @@
       ],
       "dateKind": "due",
       "monthlyDay": null,
-      "conditional": false
+      "conditional": false,
+      "group": "监管日历"
     },
     {
       "id": "c2026-04",
@@ -63,7 +66,8 @@
       "dates": [],
       "dateKind": "due",
       "monthlyDay": 21,
-      "conditional": false
+      "conditional": false,
+      "group": "监管日历"
     },
     {
       "id": "c2026-05",
@@ -79,7 +83,8 @@
       ],
       "dateKind": "due",
       "monthlyDay": null,
-      "conditional": false
+      "conditional": false,
+      "group": "监管日历"
     },
     {
       "id": "c2026-06",
@@ -95,7 +100,8 @@
       ],
       "dateKind": "due",
       "monthlyDay": null,
-      "conditional": false
+      "conditional": false,
+      "group": "监管日历"
     },
     {
       "id": "c2026-07",
@@ -111,7 +117,8 @@
       ],
       "dateKind": "due",
       "monthlyDay": null,
-      "conditional": false
+      "conditional": false,
+      "group": "监管日历"
     },
     {
       "id": "c2026-08",
@@ -127,7 +134,8 @@
       ],
       "dateKind": "due",
       "monthlyDay": null,
-      "conditional": false
+      "conditional": false,
+      "group": "监管日历"
     },
     {
       "id": "c2026-09",
@@ -143,7 +151,8 @@
       ],
       "dateKind": "due",
       "monthlyDay": null,
-      "conditional": false
+      "conditional": false,
+      "group": "监管日历"
     },
     {
       "id": "c2026-10",
@@ -159,7 +168,8 @@
       ],
       "dateKind": "due",
       "monthlyDay": null,
-      "conditional": false
+      "conditional": false,
+      "group": "监管日历"
     },
     {
       "id": "c2026-11",
@@ -175,7 +185,8 @@
       ],
       "dateKind": "due",
       "monthlyDay": null,
-      "conditional": false
+      "conditional": false,
+      "group": "监管日历"
     },
     {
       "id": "c2026-12",
@@ -191,7 +202,8 @@
       ],
       "dateKind": "due",
       "monthlyDay": null,
-      "conditional": true
+      "conditional": true,
+      "group": "监管日历"
     },
     {
       "id": "c2026-13",
@@ -207,12 +219,13 @@
       ],
       "dateKind": "due",
       "monthlyDay": null,
-      "conditional": false
+      "conditional": false,
+      "group": "监管日历"
     },
     {
       "id": "c2026-14",
       "category": "税务申报",
-      "title": "开曼金融机构(Financial Institutions) FATCA及CRS申报 ",
+      "title": "开曼金融机构(Financial Institutions) FATCA及CRS申报",
       "deadlineText": "7月31日",
       "frequency": "年度",
       "owner": "Fund Admin/PWC",
@@ -223,12 +236,13 @@
       ],
       "dateKind": "due",
       "monthlyDay": null,
-      "conditional": false
+      "conditional": false,
+      "group": "监管日历"
     },
     {
       "id": "c2026-15",
       "category": "税务申报",
-      "title": "开曼2025财年 CRS Compliance Form ",
+      "title": "开曼2025财年 CRS Compliance Form",
       "deadlineText": "9月15日",
       "frequency": "年度",
       "owner": "财务部/PWC",
@@ -239,7 +253,8 @@
       ],
       "dateKind": "due",
       "monthlyDay": null,
-      "conditional": false
+      "conditional": false,
+      "group": "监管日历"
     },
     {
       "id": "c2026-16",
@@ -255,7 +270,8 @@
       ],
       "dateKind": "due",
       "monthlyDay": null,
-      "conditional": true
+      "conditional": true,
+      "group": "监管日历"
     },
     {
       "id": "c2026-17",
@@ -271,7 +287,8 @@
       ],
       "dateKind": "due",
       "monthlyDay": null,
-      "conditional": false
+      "conditional": false,
+      "group": "监管日历"
     },
     {
       "id": "c2026-18",
@@ -287,7 +304,247 @@
       ],
       "dateKind": "start",
       "monthlyDay": null,
-      "conditional": false
+      "conditional": false,
+      "group": "监管日历"
+    },
+    {
+      "id": "m2026-01",
+      "group": "定期监控",
+      "category": "合规风险",
+      "title": "合规风险监控",
+      "scope": "复核年度合规日历、监控计划、制度清单，以及与公司及所管理基金相关的重大监管发展。",
+      "deadlineText": "12月31日（目标日）",
+      "frequency": "年度；如有重大变化则临时更新",
+      "owner": "法规部",
+      "participants": "RO、高级管理层",
+      "sourceStatus": "文档未注明",
+      "dates": [
+        "2026-12-31"
+      ],
+      "dateKind": "target",
+      "monthlyDay": null,
+      "conditional": false,
+      "output": "年度合规计划、制度更新记录",
+      "escalation": "重大缺口或逾期整改事项应向高级管理层/负责人员报告。",
+      "targetBasis": "用户指定2026年12月31日为目标提醒日期"
+    },
+    {
+      "id": "m2026-03",
+      "group": "定期监控",
+      "category": "财务资源",
+      "title": "财务资源监控",
+      "scope": "监控速动资金、规定速动资金、月度FRR编制、预警阈值及管理层对财务资源的复核。",
+      "deadlineText": "12月31日（目标日）",
+      "frequency": "月度",
+      "owner": "财务部/前台",
+      "participants": "-",
+      "sourceStatus": "文档未注明",
+      "dates": [
+        "2026-12-31"
+      ],
+      "dateKind": "target",
+      "monthlyDay": null,
+      "conditional": false,
+      "output": "FRR工作底稿、速动资金缓冲复核、提交记录、例外事项记录",
+      "escalation": "如缓冲下降、存在不足风险或提交延误，应升级至负责人员及高级管理层。",
+      "targetBasis": "用户指定2026年12月31日为目标提醒日期"
+    },
+    {
+      "id": "m2026-04",
+      "group": "定期监控",
+      "category": "AML/KYC",
+      "title": "AML/KYC监控",
+      "scope": "投资者开户文件，包括KYC文件、专业投资者身份、资金来源、制裁/PEP/负面媒体筛查、持续监控。",
+      "deadlineText": "12月31日（目标日）",
+      "frequency": "开户时及年度。",
+      "owner": "法规部",
+      "participants": "投资团队",
+      "sourceStatus": "文档未注明",
+      "dates": [
+        "2026-12-31"
+      ],
+      "dateKind": "target",
+      "monthlyDay": null,
+      "conditional": false,
+      "output": "抽样文件、筛查记录、投资者文件清单、例外事项整改证据",
+      "escalation": "高风险客户、制裁命中、未解决的CDD缺口或可疑活动疑虑应升级处理。",
+      "targetBasis": "用户指定2026年12月31日为目标提醒日期"
+    },
+    {
+      "id": "m2026-05",
+      "group": "定期监控",
+      "category": "销售流程",
+      "title": "销售流程监控",
+      "scope": "复核基金销售文件、投资者沟通材料，确认使用经批准版本",
+      "deadlineText": "12月31日（目标日）",
+      "frequency": "销售前；并定期抽样复核",
+      "owner": "法规部",
+      "participants": "投资团队",
+      "sourceStatus": "文档未注明",
+      "dates": [
+        "2026-12-31"
+      ],
+      "dateKind": "target",
+      "monthlyDay": null,
+      "conditional": false,
+      "output": "批准邮件、版本控制记录、已复核材料、披露清单",
+      "escalation": "存在重大法律/合规问题的材料，在获得清理确认前不得使用。",
+      "targetBasis": "用户指定2026年12月31日为目标提醒日期"
+    },
+    {
+      "id": "m2026-08",
+      "group": "定期监控",
+      "category": "个人交易及员工操守",
+      "title": "个人交易及员工操守监控",
+      "scope": "复核员工交易声明、预先批准记录、限制/观察名单、外部活动及道德守则确认。",
+      "deadlineText": "12月31日（目标日）",
+      "frequency": "半年度声明",
+      "owner": "法规部/人力部",
+      "participants": "持牌人士",
+      "sourceStatus": "文档未注明",
+      "dates": [
+        "2026-12-31"
+      ],
+      "dateKind": "target",
+      "monthlyDay": null,
+      "conditional": false,
+      "output": "个人交易声明、预先批准记录、例外报告、员工确认记录。",
+      "escalation": "涉嫌内幕交易、抢先交易或违反政策事项应立即升级处理。",
+      "targetBasis": "用户指定2026年12月31日为目标提醒日期"
+    },
+    {
+      "id": "m2026-10",
+      "group": "定期监控",
+      "category": "估值",
+      "title": "估值监控",
+      "scope": "复核估值政策执行、价格来源、估值委员会/管理层批准、陈旧价格、公允价值调整。",
+      "deadlineText": "12月31日（目标日）",
+      "frequency": "根据基金文件，通常半年",
+      "owner": "财务部/运营部",
+      "participants": "投资团队、行政管理人",
+      "sourceStatus": "文档未注明",
+      "dates": [
+        "2026-12-31"
+      ],
+      "dateKind": "target",
+      "monthlyDay": null,
+      "conditional": false,
+      "output": "估值资料包、定价支持文件、NAV复核清单、批准会议记录。",
+      "escalation": "重大估值判断或争议应升级至高级管理层。",
+      "targetBasis": "用户指定2026年12月31日为目标提醒日期"
+    },
+    {
+      "id": "m2026-11",
+      "group": "定期监控",
+      "category": "基金费用",
+      "title": "基金费用监控",
+      "scope": "根据基金文件检查管理费计算、基金费用分摊、关联方收费及绩效分成/分配瀑布计算。",
+      "deadlineText": "12月31日（目标日）",
+      "frequency": "年度；根据项目",
+      "owner": "财务部/运营部",
+      "participants": "法规部、基金行政管理人",
+      "sourceStatus": "文档未注明",
+      "dates": [
+        "2026-12-31"
+      ],
+      "dateKind": "target",
+      "monthlyDay": null,
+      "conditional": false,
+      "output": "费用计算支持文件、费用分摊复核、分配瀑布批准。",
+      "escalation": "计算错误、不允许的费用或影响投资者的事项应升级处理。",
+      "targetBasis": "用户指定2026年12月31日为目标提醒日期"
+    },
+    {
+      "id": "m2026-12",
+      "group": "定期监控",
+      "category": "服务提供商",
+      "title": "服务提供商监控",
+      "scope": "复核对关键服务提供商的尽职调查及持续监督",
+      "deadlineText": "12月31日（目标日）",
+      "frequency": "年度；根据项目需要",
+      "owner": "运营部/法规部",
+      "participants": "财务部、IT部、高级管理层",
+      "sourceStatus": "文档未注明",
+      "dates": [
+        "2026-12-31"
+      ],
+      "dateKind": "target",
+      "monthlyDay": null,
+      "conditional": false,
+      "output": "尽职调查问卷、合同复核、问题记录。",
+      "escalation": "服务失误、控制缺口或重大供应商变更应升级处理。",
+      "targetBasis": "用户指定2026年12月31日为目标提醒日期"
+    },
+    {
+      "id": "m2026-13",
+      "group": "定期监控",
+      "category": "网络安全、数据隐私及业务连续性计划",
+      "title": "网络安全、数据隐私及业务连续性计划监控",
+      "scope": "复核访问权限、数据处理、事件记录、网络安全控制、备份/灾难恢复安排及业务连续性测试。",
+      "deadlineText": "12月31日（目标日）",
+      "frequency": "半年度BCP测试",
+      "owner": "IT部/运营部",
+      "participants": "法规部、高级管理层",
+      "sourceStatus": "文档未注明",
+      "dates": [
+        "2026-12-31"
+      ],
+      "dateKind": "target",
+      "monthlyDay": null,
+      "conditional": false,
+      "output": "权限复核证据、BCP测试记录、事件记录、整改跟踪表。",
+      "escalation": "数据事件、网络安全事件或BCP测试失败结果应及时升级处理。",
+      "targetBasis": "用户指定2026年12月31日为目标提醒日期"
+    },
+    {
+      "id": "m2026-15",
+      "group": "定期监控",
+      "category": "培训及确认声明",
+      "title": "培训及确认声明监控",
+      "scope": "跟踪CPT完成进度；收集年度政策确认声明。",
+      "deadlineText": "12月31日（目标日）",
+      "frequency": "年度；新员工入职时，不定期",
+      "owner": "法规部/人力部",
+      "participants": "所有持牌及相关员工",
+      "sourceStatus": "文档未注明",
+      "dates": [
+        "2026-12-31"
+      ],
+      "dateKind": "target",
+      "monthlyDay": null,
+      "conditional": false,
+      "output": "培训出席记录、CPT跟踪表、政策确认声明、跟进提醒。",
+      "escalation": "年底前升级处理逾期CPT或缺失确认声明。",
+      "targetBasis": "用户指定2026年12月31日为目标提醒日期"
+    },
+    {
+      "id": "m2026-16",
+      "group": "定期监控",
+      "category": "账簿及记录",
+      "title": "账簿及记录监控",
+      "scope": "抽样检查关键记录的完整性及可调取性，包括投资者文件、交易记录、批准文件、估值支持文件、合规测试底稿及监管申报。",
+      "deadlineText": "12月31日（目标日）",
+      "frequency": "年度抽样复核",
+      "owner": "风险部",
+      "participants": "财务部、运营部、投资团队、基金行政管理人",
+      "sourceStatus": "文档未注明",
+      "dates": [
+        "2026-12-31"
+      ],
+      "dateKind": "target",
+      "monthlyDay": null,
+      "conditional": false,
+      "output": "记录测试表、缺失记录登记、整改证据。",
+      "escalation": "重大记录缺失或重复出现的控制弱点应升级处理。",
+      "targetBasis": "用户指定2026年12月31日为目标提醒日期"
     }
-  ]
+  ],
+  "eventDrivenAreas": [
+    "SFC牌照",
+    "投资指引",
+    "利益冲突及关联方交易",
+    "最佳执行、经纪商选择及交易分配",
+    "投诉、事件、违规及监管通知"
+  ],
+  "annualReviewNote": "年度复核。 法规部应至少每年复核监控计划，并考虑业务活动、管理基金规模、监管重点、事件及上一年度发现事项的变化，更新下一年度清单。重大发现及整改状态应汇总向高级管理层汇报。"
 }
