@@ -97,6 +97,8 @@ def make_edition(source, item, kind, sections):
     header = re.sub(r'<span class="subtitle">.*?</span>', f'<span class="subtitle">{title}</span>', header, count=1, flags=re.S)
     if kind == 'regulatory':
         header = re.sub(r'<h1\b[^>]*>.*?</h1>', '<h1>监管更新-香港基金管理行业</h1>', header, count=1, flags=re.S)
+    elif kind == 'cases':
+        header = re.sub(r'<h1\b[^>]*>.*?</h1>', '<h1>判例及执法-香港基金管理行业</h1>', header, count=1, flags=re.S)
     css = '''<style id="section-edition">
 .columns,.weekly-content .columns{display:block}.columns>section:first-child>article{display:block;min-height:0}
 .edition-label{font-size:11px;color:var(--muted);margin:15px 0 0}.legacy-section{margin:0!important}
