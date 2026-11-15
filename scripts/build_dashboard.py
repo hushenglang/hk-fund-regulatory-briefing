@@ -49,16 +49,19 @@ def build_dashboard(root, dist, catalog):
     sections = section_content((root / 'reports' / (weekly['id'] + '.html')).read_text())
     data = {kind: extract_highlights(content, kind) for kind, content in sections.items()}
     cards = []
-    for number, kind, label, caption in [('01', 'regulatory', '监管更新', '关注规则变化与业务影响'), ('02', 'cases', '判例及执法', '关注监管措施与执法启示')]:
+    icons = {
+        'regulatory': '<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6m-6 4h6m-6 4h4"/>',
+        'cases': '<path d="m14 3 7 7m-9-5 7 7M5 21l10-10m-5-4 7 7M3 21h8"/>'
+    }
+    for kind, label in [('regulatory', '监管更新'), ('cases', '判例及执法')]:
         rows = []
-        for title, detail, category in data[kind][:3]:
-            badge = f'<span class="category">{escape(category)}</span>' if category else ''
-            rows.append(f'<li>{badge}<h3>{escape(title)}</h3><p>{escape(detail)}</p></li>')
+        for title, detail, category in data[kind][:2]:
+            rows.append(f'<li><span class="headline" title="{escape(title, quote=True)}">{escape(title)}</span></li>')
         count = len(data[kind])
         cards.append(f'''<a class="module active" href="archive/{weekly['id']}-{kind}.html" aria-label="查看最新周报的{label}，共{count}项">
-<div class="module-top"><span class="number">{number}</span><span class="count">{count:02d} 项</span></div>
-<h2>{label}<span class="arrow" aria-hidden="true">↗</span></h2><p class="caption">{caption}</p>
-<ul class="highlights">{''.join(rows)}</ul><div class="module-footer">查看全部{label}<span aria-hidden="true">→</span></div></a>''')
+<div class="module-top"><span class="module-icon" aria-hidden="true"><svg viewBox="0 0 24 24">{icons[kind]}</svg></span><h2>{label}</h2><span class="status">已更新</span></div>
+<div class="metric"><strong>{count}</strong><span>项</span></div><p class="metric-note">本期收录</p>
+<p class="section-label">要点速览</p><ul class="highlights">{''.join(rows)}</ul><div class="module-footer"><span>进入模块</span><span aria-hidden="true">→</span></div></a>''')
     template = (root / 'templates/dashboard.html').read_text()
     for key, value in {'ISSUE_LABEL': escape(weekly['label']), 'ISSUE_ID': weekly['id'], 'MODULES': ''.join(cards)}.items():
         template = template.replace('{{' + key + '}}', value)

@@ -54,6 +54,6 @@ python3 scripts/build_home.py
 
 ## Dashboard
 
-`dist/dashboard.html` 是独立的合规工作台，不替换 `index.html`。每次构建从目录中选择报告期最新的周报，自动提取两栏各前三项标题及首段要点，显示完整栏目条数，并跳转到当期独立专版。季度报告不会取代 dashboard 的周报来源。
+`dist/dashboard.html` 是独立的合规工作台，不替换 `index.html`。每次构建从目录中选择报告期最新的周报，自动提取两栏各前两项简短标题，显示完整栏目条数，并跳转到当期独立专版。季度报告不会取代 dashboard 的周报来源。
 
 `templates/dashboard.html` 管理三个模块的布局；`scripts/build_dashboard.py` 管理数据提取。“合规清单提醒”目前仅为待接入位置，没有虚构清单、期限或办理状态，收到 Word 后再实现。
