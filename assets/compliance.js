@@ -9,7 +9,7 @@
   const year = Number(part('year'));
   const month = part('month');
   const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const items = data.items.map(item => {
+  const items = data.items.filter(item => ['owner','participants'].some(field => /法规部|法律合规部/.test(String(item[field]||'')))).map(item => {
     const monthly = Boolean(item.monthlyDay);
     const status = monthly || item.sourceStatus === '文档未注明' ? '待确认' : item.sourceStatus === '已完成' ? '已完成' : '待进行';
     const date = monthly ? `${data.year}-${month}-${String(item.monthlyDay).padStart(2,'0')}` : item.dates.find(d => d >= today) || item.dates.at(-1) || '';
@@ -34,7 +34,7 @@
   set('compliance-asof',today);
   set('annual-review-note',data.annualReviewNote||'');
   const monitoring = items.filter(i => i.group === '定期监控');
-  set('compliance-card-note',`${data.year}年度 · ${items.length}项清单 · ${monitoring.length}项定期监控`);
+  set('compliance-card-note',`${data.year}年度 · ${items.length}项备忘 · ${monitoring.length}项定期监控`);
   const preview = document.getElementById('compliance-preview');
   if (preview) {
     const first = [...confirm,...pending].sort((a,b)=>a.date.localeCompare(b.date))[0];
@@ -54,7 +54,7 @@
   let group = '全部';
   const render = () => {
     const visible = items.filter(i => (filter==='全部'||(filter==='待跟进'?i.status!=='已完成':i.status===filter)) && (group==='全部'||i.group===group) && [i.title,i.category,i.owner,i.participants,i.scope||'',i.output||'',i.escalation||''].join(' ').toLowerCase().includes(query));
-    tbody.innerHTML = visible.map(i => `<tr><td><strong>${escape(i.title)}</strong><small>${escape(i.group||'监管日历')} · ${escape(i.category)}</small>${i.scope?`<details class="monitoring-detail"><summary>监控范围及输出</summary><p><b>范围：</b>${escape(i.scope)}</p><p><b>输出：</b>${escape(i.output)}</p><p><b>升级触发：</b>${escape(i.escalation)}</p></details>`:''}</td><td>${escape(i.deadlineText)}<small>${escape(i.timing)}</small>${i.monthlyDay ? '<small>本月提醒：'+escape(i.date)+'</small>' : ''}</td><td>${escape(i.frequency)}</td><td>${escape(i.owner)}<small>参与：${escape(i.participants)}</small></td><td><span class="pill ${i.status==='已完成'?'done':'pending'}">${escape(i.status)}</span><small>文档记录：${escape(i.sourceStatus)}</small></td></tr>`).join('');
+    tbody.innerHTML = visible.map(i => `<tr><td><strong>${escape(i.title)}</strong><small>${escape(i.group||'监管日历')} · ${escape(i.category)}</small>${i.scope?`<details class="monitoring-detail"><summary>监控范围及输出</summary><p><b>范围：</b>${escape(i.scope)}</p><p><b>输出：</b>${escape(i.output)}</p><p><b>升级触发：</b>${escape(i.escalation)}</p></details>`:''}</td><td>${escape(i.deadlineText)}<small>${escape(i.timing)}</small>${i.monthlyDay ? '<small>本月提醒：'+escape(i.date)+'</small>' : ''}</td><td>${escape(i.frequency)}</td><td>${escape(i.owner)}<small>配合：${escape(i.participants)}</small></td><td><span class="pill ${i.status==='已完成'?'done':'pending'}">${escape(i.status)}</span><small>文档记录：${escape(i.sourceStatus)}</small></td></tr>`).join('');
     set('compliance-empty',visible.length ? '' : '此筛选条件下没有事项。');
     set('compliance-showing',`${visible.length} / ${items.length} 项`);
     document.querySelectorAll('[data-compliance-filter]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.complianceFilter===filter)));

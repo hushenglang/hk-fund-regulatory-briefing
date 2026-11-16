@@ -84,7 +84,7 @@ def external_news_links(html):
     return re.sub(r'<a\b[^>]*>', update, html, flags=re.I)
 
 
-def make_edition(source, item, kind, sections):
+def make_edition(source, item, kind, sections, root=None):
     title = {'regulatory': '监管更新', 'cases': '判例及执法'}[kind]
     doc = Document(source)
     head = doc.html(next(n for n in doc.nodes if n.tag == 'head'))
@@ -109,16 +109,22 @@ def make_edition(source, item, kind, sections):
     content = ''.join(sections)
     if kind == 'regulatory':
         content = external_news_links(content)
+    from regions import annotate_regions, region_tabs, region_assets
+    content,counts=annotate_regions(content)
+    tabs=region_tabs(counts,title)
+    if root is not None:head=head.replace('</head>',region_assets(root,'../')+'</head>')
     # A standalone edition identifies itself in the header; keep original section
     # headings, table captions, notes and official sources exactly as authored.
-    body = f'<body id="top"><main class="sheet">{header}<p class="edition-label">{escape(item["type"])} · {escape(item["label"])} · {title}专版</p><div class="columns weekly-content">{content}</div><footer class="footer"><p>法律合规部 · {escape(item["label"])} · {title}</p></footer></main></body>'
+    body = f'<body id="top"><main class="sheet">{header}<p class="edition-label">{escape(item["type"])} · {escape(item["label"])} · {title}专版</p>{tabs}<div class="columns weekly-content" data-region-content>{content}</div><footer class="footer"><p>法律合规部 · {escape(item["label"])} · {title}</p></footer></main></body>'
     return '<!doctype html><html lang="zh-CN">' + head + body + '</html>'
 
 
 def build_split_reports(root, dist, catalog):
+    from regions import copy_region_assets
+    copy_region_assets(root,dist)
     for item in catalog:
         source = (root / 'reports' / (item['id'] + '.html')).read_text()
         sections = section_content(source)
         for kind, content in sections.items():
-            (dist / 'archive' / f'{item["id"]}-{kind}.html').write_text(make_edition(source, item, kind, content))
+            (dist / 'archive' / f'{item["id"]}-{kind}.html').write_text(make_edition(source, item, kind, content, root))
     print(f'Built {len(catalog) * 2} section editions; combined homepage unchanged')

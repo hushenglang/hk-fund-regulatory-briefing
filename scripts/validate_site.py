@@ -53,6 +53,7 @@ assert source_ids == {item["id"] for item in catalog}, "Register every report in
 print(f"Validated {len(pages)} pages: latest issue, archive articles, links and anchors")
 
 from split_reports import section_content, Document, external_news_links
+import re
 for item in catalog:
     source = (ROOT / "reports" / (item["id"] + ".html")).read_text()
     sections = section_content(source)
@@ -61,7 +62,8 @@ for item in catalog:
         for section in content:
             if kind == 'regulatory':
                 section = external_news_links(section)
-            assert section in output, f"Section content changed: {item['id']} {kind}"
+            ungrouped = re.sub(r'\s+data-region-item="[^"]+"', '', output)
+            assert section in ungrouped, f"Section content changed: {item['id']} {kind}"
         unwanted = "cases" if kind == "regulatory" else "regulatory"
         for section in sections[unwanted]:
             assert section not in output, f"Other section leaked: {item['id']} {kind}"
@@ -96,7 +98,7 @@ from build_legislation import legislation_data
 from html import unescape
 board=(DIST/'dashboard.html').read_text()
 headings=[unescape(re.sub('<[^>]+>','',m)) for m in re.findall(r'<h2\b[^>]*>(.*?)</h2>',board,re.S)]
-expected=['\u7acb\u6cd5\u8d8b\u52bf','\u5224\u4f8b\u53ca\u6267\u6cd5','\u76d1\u7ba1\u66f4\u65b0','\u56db\u4f4d\u4e00\u4f53','\u5408\u89c4\u6e05\u5355\u63d0\u9192','\u6bcf\u65e5\u5f85\u529e']
+expected=['\u7acb\u6cd5\u52a8\u6001','\u5224\u4f8b\u53ca\u6267\u6cd5','\u76d1\u7ba1\u66f4\u65b0','\u56db\u4f4d\u4e00\u4f53','\u5408\u89c4\u4e8b\u9879\u5907\u5fd8','\u6bcf\u65e5\u5f85\u529e']
 assert headings==expected, headings
 legislation=legislation_data(ROOT)
 legislation_html=(DIST/'legislation.html').read_text()
@@ -107,3 +109,15 @@ for item in legislation['items']:
     for source in item['sources']:
         assert source['url'] in legislation_html, 'Lost legislative source'
 print('Workbench order and legislative source attribution verified')
+
+from build_compliance import compliance_data
+compliance=compliance_data(ROOT)
+assert all(any(dept in str(item.get(field,'')) for field in ('owner','participants') for dept in ('法规部','法律合规部')) for item in compliance['items'])
+payload=re.search(r'<script id="compliance-data" type="application/json">(.*?)</script>',(DIST/'compliance.html').read_text(),re.S)
+assert {i['id'] for i in json.loads(payload[1])['items']}=={i['id'] for i in compliance['items']}, 'Memo scope differs from displayed payload'
+for filename in ['legislation.html']+[f'archive/{item["id"]}-{kind}.html' for item in catalog for kind in ('regulatory','cases')]:
+    page=(DIST/filename).read_text()
+    assert page.count('data-region-tab=')==3, filename
+    counts={r:page.count('data-region-item="'+r+'"') for r in ('香港','内地','其他')}
+    assert sum(counts.values())>0, filename
+print('Regional tabs and compliance department scope verified')

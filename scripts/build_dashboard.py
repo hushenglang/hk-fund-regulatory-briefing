@@ -6,7 +6,7 @@ from datetime import datetime
 from zoneinfo import ZoneInfo
 from html import escape, unescape
 from split_reports import Document, section_content
-from build_compliance import compliance_payload, compliance_version, compliance_script
+from build_compliance import compliance_payload, compliance_version, compliance_script, compliance_counts
 from build_intelligence import dashboard_card
 from build_legislation import legislation_card
 
@@ -76,6 +76,7 @@ def build_dashboard(root, dist, catalog):
     intelligence = dashboard_card(root)
     for key, value in {'ISSUE_LABEL': escape(weekly['label']), 'ISSUE_ID': weekly['id'], 'MODULES': ''.join(cards), 'INTELLIGENCE': intelligence, 'LEGISLATION': legislation_card(root)}.items():
         template = template.replace('{{' + key + '}}', value)
+    template = compliance_counts(template,root)
     template = template.replace('href="compliance.html"', f'href="compliance.html?v={compliance_version(root)}"')
     dashboard_script_version = hashlib.sha256((root / 'assets/intelligence-dashboard.js').read_bytes()).hexdigest()[:12]
     template = template.replace('</body>', compliance_payload(root) + compliance_script(root) + f'<script src="assets/daily-todos.js"></script><script src="assets/intelligence-dashboard.js?v={dashboard_script_version}"></script></body>')
