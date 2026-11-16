@@ -90,3 +90,20 @@ window=intelligence_data(ROOT)
 assert all(window['windowStart']<=i['published']<=window['displayDate'] for i in today_items)
 assert not any('intelligence' in i['id'] for i in catalog), 'Do not put daily feeds in report archives'
 print(f'Intelligence validated: {len(urls)} unique sourced headlines')
+
+# Fixed six-module workbench order and attributed legislative records.
+from build_legislation import legislation_data
+from html import unescape
+board=(DIST/'dashboard.html').read_text()
+headings=[unescape(re.sub('<[^>]+>','',m)) for m in re.findall(r'<h2\b[^>]*>(.*?)</h2>',board,re.S)]
+expected=['\u7acb\u6cd5\u8d8b\u52bf','\u5224\u4f8b\u53ca\u6267\u6cd5','\u76d1\u7ba1\u66f4\u65b0','\u56db\u4f4d\u4e00\u4f53','\u5408\u89c4\u6e05\u5355\u63d0\u9192','\u6bcf\u65e5\u5f85\u529e']
+assert headings==expected, headings
+legislation=legislation_data(ROOT)
+legislation_html=(DIST/'legislation.html').read_text()
+assert legislation_html.count('class="legislation-item"')==len(legislation['items'])
+assert {i['jurisdiction'] for i in legislation['items']} >= {'\u9999\u6e2f','\u5185\u5730','\u7f8e\u56fd'}
+for item in legislation['items']:
+    assert item['stage'] and item['stageRecord'] and item['nextStep']
+    for source in item['sources']:
+        assert source['url'] in legislation_html, 'Lost legislative source'
+print('Workbench order and legislative source attribution verified')

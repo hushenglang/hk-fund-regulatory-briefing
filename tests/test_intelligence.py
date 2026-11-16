@@ -76,7 +76,7 @@ class SevenDayDisplayTests(unittest.TestCase):
         data={'items':[],'sources':[],'displayDate':'2026-11-16','updatedAt':'2026-11-16T07:00:00+08:00'}
         with tempfile.TemporaryDirectory() as folder,patch.object(b,'intelligence_data',return_value=data):
             dist=Path(folder);(dist/'assets').mkdir();b.build_intelligence(root,dist)
-            self.assertIn('四位一体 + 法律AI',b.dashboard_card(root))
+            self.assertIn('四位一体',b.dashboard_card(root))
             self.assertIn('近7天暂无更新',b.dashboard_card(root))
             html=(dist/'intelligence.html').read_text()
             self.assertIn('aria-label="资讯列表">',html)

@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "verifiedAt": "2026-11-16",
+  "items": [
+    {
+      "id": "hk-funds-tax-2026",
+      "jurisdiction": "香港",
+      "title": "基金、家族办公室及附带权益税制修订：扩大优惠范围并引入基金申报与实质要求",
+      "updateDate": "2026-11-11",
+      "stage": "法案审议跟踪",
+      "stageRecord": "11月11日政府答复：修订草案已提交立法会，预期年内恢复二读辩论。",
+      "summary": "6月刊宪的草案拟扩大基金定义和合资格投资范围、移除附带交易5%门槛，并优化特殊目的实体及附带权益安排；同时拟在基金统一豁免制度下引入税务申报机制和经济实质要求。",
+      "businessFocus": "关注基金架构、另类资产投资、附带权益分配及香港实质活动的证明材料，核对现有安排与最终条文的差异。",
+      "nextStep": "跟踪恢复二读、通过及实施安排；政府表示如获通过，相关修订拟适用于2025/26及其后课税年度。",
+      "sources": [
+        {"label": "香港政府 11月11日立法会答复", "url": "https://www.info.gov.hk/gia/general/202611/11/P2026111000414p.htm"},
+        {"label": "香港政府 草案刊宪说明", "url": "https://www.info.gov.hk/gia/general/202606/12/P2026061200200.htm"}
+      ]
+    },
+    {
+      "id": "hk-reit-legislative-plans-2026",
+      "jurisdiction": "香港",
+      "title": "房托基金私有化、重组及上市前物业转让印花税宽免的修例计划",
+      "updateDate": "2026-11-06",
+      "stage": "立法计划",
+      "stageRecord": "11月6日政府公布：计划于当月提交便利房托私有化或重组的修订草案。",
+      "summary": "政府同时计划于2027年上半年提交另一项草案，为准备上市的房托基金转让非住宅物业提供印花税宽免。两项安排属于分别推进的修例计划。",
+      "businessFocus": "关注房托投资退出、重组路径，以及物业注入上市房托的交易成本；尚未公布的细节须以正式草案为准。",
+      "nextStep": "跟踪正式提交的法案文本及审议进度，分别核对私有化机制与印花税宽免的适用条件和生效安排。",
+      "sources": [
+        {"label": "香港政府 财库局副局长立法会发言", "url": "https://www.info.gov.hk/gia/general/202611/06/P2026110600462.htm"}
+      ]
+    },
+    {
+      "id": "cn-financial-law-second-reading-2026",
+      "jurisdiction": "内地",
+      "title": "金融法草案二审：加强投资者保护、互联网营销及资管业务规则",
+      "updateDate": "2026-11-03",
+      "stage": "草案二次审议",
+      "stageRecord": "11月3日官方转载报道：草案于11月2日提请全国人大常委会二次审议。",
+      "summary": "二审稿增加公平交易条件、客户适当性及风险提示要求，拟限制非公开发行金融产品通过互联网公开宣传或变相公开劝诱，并增加资产管理业务和跨境金融活动监管相关规定。",
+      "businessFocus": "关注面向境内投资者的基金推介、互联网营销材料、适当性流程及跨境展业安排；此处为草案进展。",
+      "nextStep": "跟踪后续草案文本、审议及配套规则，核对资管机构和跨境服务的具体适用范围。",
+      "sources": [
+        {"label": "上海市委金融办 转载新华社二审报道", "url": "https://jrj.sh.gov.cn/ZXYW178/20261103/f114ee1b00ea44e3bae59007631b1cb3.html"},
+        {"label": "中国证监会 初始草案公开征求意见说明", "url": "https://www.csrc.gov.cn/csrc/c100028/c7621153/content.shtml"}
+      ]
+    },
+    {
+      "id": "us-s3671-119",
+      "jurisdiction": "美国",
+      "title": "S.3671 拟调整封闭式投资公司投资私募基金的法律限制",
+      "updateDate": "2026-01-15",
+      "stage": "已提出并转委员会",
+      "stageRecord": "已核实节点：2026年1月15日在参议院提出并转银行、住房及城市事务委员会。",
+      "summary": "Increasing Investor Opportunities Act 拟修订《1940年投资公司法》，在法定限制框架下约束SEC对封闭式投资公司投资私募基金施加限制的权限，并涉及相关证券销售条件。",
+      "businessFocus": "关注美国封闭式产品与私募基金之间的配置和分销结构。这是一项持续跟踪的提案，不代表相关投资限制已经解除。",
+      "nextStep": "继续核对国会后续行动、相关法案及是否通过；信息日期保留已核实节点，不以本次整理日期替代。",
+      "sources": [
+        {"label": "Congress.gov 法案及程序记录", "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3671"},
+        {"label": "美国政府出版局 提案原文", "url": "https://www.govinfo.gov/content/pkg/BILLS-119s3671is/html/BILLS-119s3671is.htm"}
+      ]
+    }
+  ]
+}

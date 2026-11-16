@@ -84,3 +84,6 @@ build_compliance(ROOT, DIST)
 
 from build_intelligence import build_intelligence
 build_intelligence(ROOT, DIST)
+
+from build_legislation import build_legislation
+build_legislation(ROOT, DIST)
