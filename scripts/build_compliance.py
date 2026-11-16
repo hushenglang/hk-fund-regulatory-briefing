@@ -8,7 +8,7 @@ def compliance_data(root):
     data=json.loads((root/'data/compliance-2026.json').read_text())
     assert data['year']==2026
     assert len(data['items'])==len({i['id'] for i in data['items']})
-    data['items']=[i for i in data['items'] if any(dept in str(i.get(field,'')) for field in ('owner','participants') for dept in ('法规部','法律合规部'))]
+    data['items']=[i for i in data['items'] if not i.get('excludedFromMemo') and any(dept in str(i.get(field,'')) for field in ('owner','participants') for dept in ('法规部','法律合规部'))]
     return data
 
 

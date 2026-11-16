@@ -9,7 +9,7 @@
   const year = Number(part('year'));
   const month = part('month');
   const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const items = data.items.filter(item => ['owner','participants'].some(field => /法规部|法律合规部/.test(String(item[field]||'')))).map(item => {
+  const items = data.items.filter(item => !item.excludedFromMemo && ['owner','participants'].some(field => /法规部|法律合规部/.test(String(item[field]||'')))).map(item => {
     const monthly = Boolean(item.monthlyDay);
     const status = monthly || item.sourceStatus === '文档未注明' ? '待确认' : item.sourceStatus === '已完成' ? '已完成' : '待进行';
     const date = monthly ? `${data.year}-${month}-${String(item.monthlyDay).padStart(2,'0')}` : item.dates.find(d => d >= today) || item.dates.at(-1) || '';

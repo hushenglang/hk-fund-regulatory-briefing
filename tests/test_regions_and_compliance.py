@@ -25,7 +25,7 @@ class RegionTests(unittest.TestCase):
 
 class ComplianceScopeTests(unittest.TestCase):
     def test_owner_or_participant_involvement_retains_item(self):
-        rows=[dict(id='owner',owner='法规部/运营部',participants='财务部'),dict(id='participant',owner='财务部',participants='法规部、行政管理人'),dict(id='neither',owner='财务部/RO',participants='Auditor'),dict(id='title_only',owner='财务部',participants='-',title='法规部相关参考')]
+        rows=[dict(id='owner',owner='法规部/运营部',participants='财务部'),dict(id='participant',owner='财务部',participants='法规部、行政管理人'),dict(id='neither',owner='财务部/RO',participants='Auditor'),dict(id='title_only',owner='财务部',participants='-',title='法规部相关参考'),dict(id='excluded',owner='法规部',participants='财务部',excludedFromMemo=True)]
         with tempfile.TemporaryDirectory() as folder:
             root=Path(folder);(root/'data').mkdir();path=root/'data/compliance-2026.json';path.write_text(json.dumps({'year':2026,'items':rows}));original=path.read_bytes()
             filtered=compliance_data(root)

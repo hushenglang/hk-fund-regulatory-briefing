@@ -435,6 +435,7 @@
     },
     {
       "id": "m2026-11",
+      "excludedFromMemo": true,
       "group": "定期监控",
       "category": "基金费用",
       "title": "基金费用监控",
