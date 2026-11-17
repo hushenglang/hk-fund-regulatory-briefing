@@ -2,6 +2,78 @@
   "schemaVersion": 1,
   "items": [
     {
+      "title": "AI-driven conveyancing start-up set to expand nationally",
+      "url": "https://www.legalfutures.co.uk/latest-news/ai-driven-conveyancing-start-up-set-to-expand-nationally",
+      "published": "2026-11-17",
+      "source": "legalfutures",
+      "kind": "ai",
+      "firstSeenAt": "2026-11-17T12:59:05+08:00",
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
+    },
+    {
+      "title": "The AI competence test every junior solicitor should pass",
+      "url": "https://www.legalfutures.co.uk/blog/the-ai-competence-test-every-junior-solicitor-should-pass",
+      "published": "2026-11-17",
+      "source": "legalfutures",
+      "kind": "ai",
+      "firstSeenAt": "2026-11-17T12:59:05+08:00",
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
+    },
+    {
+      "title": "Exclusive: MinuteBox Launches AI Agent to Turn Its Entity Management Database Into a ‘System of Work’",
+      "url": "https://www.lawnext.com/2026/11/exclusive-minutebox-launches-ai-agent-to-turn-its-entity-management-database-into-a-system-of-work.html",
+      "published": "2026-11-17",
+      "source": "lawnext",
+      "kind": "ai",
+      "firstSeenAt": "2026-11-17T12:59:05+08:00",
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
+    },
+    {
+      "title": "Legal AI is moving deeper into legal workflows – is your firm ready?",
+      "url": "https://www.legalfutures.co.uk/associate-news/legal-ai-is-moving-deeper-into-legal-workflows-is-your-firm-ready",
+      "published": "2026-11-16",
+      "source": "legalfutures",
+      "kind": "ai",
+      "firstSeenAt": "2026-11-17T12:59:05+08:00",
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
+    },
+    {
+      "title": "Planning Your Law Firm’s 2027 Technology Budget",
+      "url": "https://www.harvey.ai/blog/law-firm-technology-budget",
+      "published": "2026-11-16",
+      "source": "harvey",
+      "kind": "ai",
+      "firstSeenAt": "2026-11-17T12:59:05+08:00",
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
+    },
+    {
+      "title": "HSF Kramer Hires 6 Legal Engineers from Norm.AI",
+      "url": "https://www.artificiallawyer.com/2026/11/16/hsf-kramer-hires-6-legal-engineers-from-norm-ai/",
+      "published": "2026-11-16",
+      "source": "artificiallawyer",
+      "kind": "ai",
+      "firstSeenAt": "2026-11-17T12:59:05+08:00",
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
+    },
+    {
+      "title": "Walker Morris builds on AI investment with Legora partnership",
+      "url": "https://legora.com/newsroom/walker-morris-builds-on-ai-investment-with-legora-partnership",
+      "published": "2026-11-16",
+      "source": "legora",
+      "kind": "ai",
+      "firstSeenAt": "2026-11-17T12:59:05+08:00",
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
+    },
+    {
+      "title": "Legora extends offering with legal intake in Microsoft Teams and agentic search across Microsoft 365",
+      "url": "https://legora.com/newsroom/legora-extends-offering-with-legal-intake-in-microsoft-teams-and-agentic-search-across-microsoft-365",
+      "published": "2026-11-16",
+      "source": "legora",
+      "kind": "ai",
+      "firstSeenAt": "2026-11-17T12:59:05+08:00",
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
+    },
+    {
       "title": "The AI question law firms should answer before a client asks it",
       "url": "https://www.legalfutures.co.uk/blog/the-ai-question-law-firms-should-answer-before-a-client-asks-it",
       "published": "2026-11-13",
@@ -26,7 +98,7 @@
       "source": "harvey",
       "kind": "ai",
       "firstSeenAt": "2026-11-16T00:23:56+08:00",
-      "lastSeenAt": "2026-11-16T10:38:11+08:00"
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
     },
     {
       "title": "Building Ethical Wall Enforcement Into Harvey",
@@ -35,7 +107,7 @@
       "source": "harvey",
       "kind": "ai",
       "firstSeenAt": "2026-11-16T00:23:56+08:00",
-      "lastSeenAt": "2026-11-16T10:38:11+08:00"
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
     },
     {
       "title": "How Legal Engineers Would Use Harvey Agents for Outlook",
@@ -44,7 +116,7 @@
       "source": "harvey",
       "kind": "ai",
       "firstSeenAt": "2026-11-16T00:23:56+08:00",
-      "lastSeenAt": "2026-11-16T10:38:11+08:00"
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
     },
     {
       "title": "Close Contracts Faster With Every Version in One Place",
@@ -53,7 +125,7 @@
       "source": "harvey",
       "kind": "ai",
       "firstSeenAt": "2026-11-16T00:23:56+08:00",
-      "lastSeenAt": "2026-11-16T10:38:11+08:00"
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
     },
     {
       "title": "Keeping Legal AI Connected: Why Your Data and Case Should Work Together",
@@ -62,7 +134,7 @@
       "source": "artificiallawyer",
       "kind": "ai",
       "firstSeenAt": "2026-11-16T00:23:56+08:00",
-      "lastSeenAt": "2026-11-16T10:38:11+08:00"
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
     },
     {
       "title": "Is Big Law ‘AI Gaslighting’ Us?",
@@ -71,7 +143,7 @@
       "source": "artificiallawyer",
       "kind": "ai",
       "firstSeenAt": "2026-11-16T00:23:56+08:00",
-      "lastSeenAt": "2026-11-16T10:38:11+08:00"
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
     },
     {
       "title": "Harvey Adds Danish Legislation and its Preparatory Works Through Partnership with Djøf Forlag",
@@ -80,7 +152,7 @@
       "source": "harvey",
       "kind": "ai",
       "firstSeenAt": "2026-11-16T00:23:56+08:00",
-      "lastSeenAt": "2026-11-16T10:38:11+08:00"
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
     },
     {
       "title": "Mercedes Lawyer Joins AI Native Compound Law",
@@ -89,7 +161,7 @@
       "source": "artificiallawyer",
       "kind": "ai",
       "firstSeenAt": "2026-11-16T00:23:56+08:00",
-      "lastSeenAt": "2026-11-16T10:38:11+08:00"
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
     },
     {
       "title": "Legora Targets Public Sector With Ex-Minister",
@@ -98,7 +170,7 @@
       "source": "artificiallawyer",
       "kind": "ai",
       "firstSeenAt": "2026-11-16T00:23:56+08:00",
-      "lastSeenAt": "2026-11-16T10:38:11+08:00"
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
     },
     {
       "title": "Legora and DiliTrust partner to connect legal AI with contract and entity management for in-house legal teams",
@@ -107,7 +179,7 @@
       "source": "legora",
       "kind": "ai",
       "firstSeenAt": "2026-11-16T00:23:56+08:00",
-      "lastSeenAt": "2026-11-16T10:38:11+08:00"
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
     },
     {
       "title": "Former Cabinet minister Lucy Frazer KC expands role at Legora to improve public services through partnerships with governments",
@@ -116,7 +188,7 @@
       "source": "legora",
       "kind": "ai",
       "firstSeenAt": "2026-11-16T00:23:56+08:00",
-      "lastSeenAt": "2026-11-16T10:38:11+08:00"
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
     },
     {
       "title": "Tax Research Platform Blue J Raises $176M to Expand Its Agentic AI and Reach New Markets",
@@ -125,7 +197,7 @@
       "source": "lawnext",
       "kind": "ai",
       "firstSeenAt": "2026-11-16T00:23:56+08:00",
-      "lastSeenAt": "2026-11-16T10:38:11+08:00"
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
     },
     {
       "title": "香港《单位信托守则》重大修订：基金经理须知",
@@ -152,7 +224,7 @@
       "source": "harvey",
       "kind": "ai",
       "firstSeenAt": "2026-11-16T00:23:56+08:00",
-      "lastSeenAt": "2026-11-16T10:38:11+08:00"
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
     },
     {
       "title": "An MSA Review Should Test the Liability Cap Against Your Smallest, Riskiest SOW",
@@ -161,7 +233,7 @@
       "source": "harvey",
       "kind": "ai",
       "firstSeenAt": "2026-11-16T00:23:56+08:00",
-      "lastSeenAt": "2026-11-16T10:38:11+08:00"
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
     },
     {
       "title": "Agiloft and Legora integrate to bring data-first contract intelligence into AI-powered work for enterprises",
@@ -170,7 +242,7 @@
       "source": "legora",
       "kind": "ai",
       "firstSeenAt": "2026-11-16T00:23:56+08:00",
-      "lastSeenAt": "2026-11-16T10:38:11+08:00"
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
     },
     {
       "title": "Clio Wants To Bring AI to the Judiciary, But 50-State Survey Reveals Policies Differ in Whether They Allow It",
@@ -179,7 +251,7 @@
       "source": "lawnext",
       "kind": "ai",
       "firstSeenAt": "2026-11-16T00:23:56+08:00",
-      "lastSeenAt": "2026-11-16T10:38:11+08:00"
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
     },
     {
       "title": "Find Every Auto Renewal Clause in Your Portfolio Before its Notice Window Closes",
@@ -188,7 +260,7 @@
       "source": "harvey",
       "kind": "ai",
       "firstSeenAt": "2026-11-16T00:28:21+08:00",
-      "lastSeenAt": "2026-11-16T10:38:11+08:00"
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
     },
     {
       "title": "More Specialized, More Personalized: Announcements From Harvey FORUM Chicago",
@@ -197,7 +269,7 @@
       "source": "harvey",
       "kind": "ai",
       "firstSeenAt": "2026-11-16T00:28:21+08:00",
-      "lastSeenAt": "2026-11-16T10:38:11+08:00"
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
     },
     {
       "title": "Introducing Harvey’s Fact Graph for Disputes, Litigation, and Investigations",
@@ -206,7 +278,7 @@
       "source": "harvey",
       "kind": "ai",
       "firstSeenAt": "2026-11-16T00:28:21+08:00",
-      "lastSeenAt": "2026-11-16T10:38:11+08:00"
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
     },
     {
       "title": "AI Fluency in Legal Hiring and How to Show it",
@@ -215,7 +287,7 @@
       "source": "harvey",
       "kind": "ai",
       "firstSeenAt": "2026-11-16T00:28:21+08:00",
-      "lastSeenAt": "2026-11-16T10:38:11+08:00"
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
     },
     {
       "title": "Obermayer adopts Legora to accelerate legal work and unlock firm knowledge",
@@ -224,7 +296,7 @@
       "source": "legora",
       "kind": "ai",
       "firstSeenAt": "2026-11-16T00:23:56+08:00",
-      "lastSeenAt": "2026-11-16T10:38:11+08:00"
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
     },
     {
       "title": "Fieldfisher goes firm-wide with Legora across its international network",
@@ -233,7 +305,7 @@
       "source": "legora",
       "kind": "ai",
       "firstSeenAt": "2026-11-16T00:23:56+08:00",
-      "lastSeenAt": "2026-11-16T10:38:11+08:00"
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
     },
     {
       "title": "SEC Division of Examinations Announces 2027 Exam Priorities: A Focus on Conflicts, Emerging Technologies, and Complex Products",
@@ -242,7 +314,7 @@
       "source": "mofo",
       "kind": "insights",
       "firstSeenAt": "2026-11-16T00:23:56+08:00",
-      "lastSeenAt": "2026-11-16T10:38:11+08:00"
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
     },
     {
       "title": "A Contract Approval Workflow Should Route Each Nonstandard Term to the Person Who Owns the Decision",
@@ -260,7 +332,7 @@
       "source": "lawnext",
       "kind": "ai",
       "firstSeenAt": "2026-11-16T00:23:56+08:00",
-      "lastSeenAt": "2026-11-16T10:38:11+08:00"
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
     },
     {
       "title": "Legora and Conga integrate to bring enterprise contracts into the agentic operating system for legal work",
@@ -269,7 +341,7 @@
       "source": "legora",
       "kind": "ai",
       "firstSeenAt": "2026-11-16T00:23:56+08:00",
-      "lastSeenAt": "2026-11-16T10:38:11+08:00"
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
     },
     {
       "title": "At Its Annual Summit, Everlaw Unveils Omni, Its Agentic AI Suite, But CEO Says Customers Are Even More Excited About Opening Its Platform to Other AI Tools",
@@ -278,7 +350,7 @@
       "source": "lawnext",
       "kind": "ai",
       "firstSeenAt": "2026-11-16T00:23:56+08:00",
-      "lastSeenAt": "2026-11-16T10:38:11+08:00"
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
     },
     {
       "title": "黄金投资不止于金条：解读香港零售黄金产品市场",
@@ -296,7 +368,7 @@
       "source": "lawnext",
       "kind": "ai",
       "firstSeenAt": "2026-11-16T00:23:56+08:00",
-      "lastSeenAt": "2026-11-16T10:38:11+08:00"
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
     },
     {
       "title": "PointOne and Legora partner to automate time entry for work in Legora and measure its value",
@@ -305,7 +377,7 @@
       "source": "legora",
       "kind": "ai",
       "firstSeenAt": "2026-11-16T00:23:56+08:00",
-      "lastSeenAt": "2026-11-16T10:38:11+08:00"
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
     },
     {
       "title": "Stoel Rives deepens its AI strategy by deploying Legora firm-wide",
@@ -314,7 +386,7 @@
       "source": "legora",
       "kind": "ai",
       "firstSeenAt": "2026-11-16T00:23:56+08:00",
-      "lastSeenAt": "2026-11-16T10:38:11+08:00"
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
     },
     {
       "title": "How We Made Review Tables Faster and More Reliable",
@@ -332,7 +404,7 @@
       "source": "legora",
       "kind": "ai",
       "firstSeenAt": "2026-11-16T00:23:56+08:00",
-      "lastSeenAt": "2026-11-16T10:38:11+08:00"
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
     },
     {
       "title": "Jones Day selects Legora as strategic AI partner, rolling out platform firm-wide to 2,500 lawyers globally",
@@ -341,7 +413,7 @@
       "source": "legora",
       "kind": "ai",
       "firstSeenAt": "2026-11-16T00:23:56+08:00",
-      "lastSeenAt": "2026-11-16T10:38:11+08:00"
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
     },
     {
       "title": "Legora raises $550 million Series E at $8.8 billion valuation to accelerate growth",
@@ -368,7 +440,7 @@
       "source": "lawnext",
       "kind": "ai",
       "firstSeenAt": "2026-11-16T00:23:56+08:00",
-      "lastSeenAt": "2026-11-16T10:38:11+08:00"
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
     },
     {
       "title": "Harvey Now Connects to Legal Research Platform Midpage Through An MCP Connector",
@@ -377,7 +449,7 @@
       "source": "lawnext",
       "kind": "ai",
       "firstSeenAt": "2026-11-16T00:23:56+08:00",
-      "lastSeenAt": "2026-11-16T10:38:11+08:00"
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
     },
     {
       "title": "Microsoft Launches Copilot for Legal, Becoming the Fourth AI Giant in Five Months to Build Out a Legal Vertical",
@@ -386,7 +458,7 @@
       "source": "lawnext",
       "kind": "ai",
       "firstSeenAt": "2026-11-16T00:23:56+08:00",
-      "lastSeenAt": "2026-11-16T10:38:11+08:00"
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
     },
     {
       "title": "Partners Want AI to Help Them Find New Business, But Most Are Running It on Data They Can’t Use, Introhive Survey Finds",
@@ -395,7 +467,7 @@
       "source": "lawnext",
       "kind": "ai",
       "firstSeenAt": "2026-11-16T00:28:21+08:00",
-      "lastSeenAt": "2026-11-16T10:38:11+08:00"
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
     },
     {
       "title": "Legora and Laurel Partner to Enable Automatic Time Capture; Will Later Develop Measures of Legora’s Value to Firms",
@@ -404,7 +476,7 @@
       "source": "lawnext",
       "kind": "ai",
       "firstSeenAt": "2026-11-16T00:23:56+08:00",
-      "lastSeenAt": "2026-11-16T10:38:11+08:00"
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
     },
     {
       "title": "Former Big Law M&A Lawyer Launches useABI, an AI ‘Associate’ That Produces Deal Docs Without Prompting",
@@ -413,7 +485,7 @@
       "source": "lawnext",
       "kind": "ai",
       "firstSeenAt": "2026-11-16T00:23:56+08:00",
-      "lastSeenAt": "2026-11-16T10:38:11+08:00"
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
     },
     {
       "title": "Building Harvey’s MCP Policy Engine",
@@ -431,7 +503,7 @@
       "source": "mofo",
       "kind": "insights",
       "firstSeenAt": "2026-11-16T00:23:56+08:00",
-      "lastSeenAt": "2026-11-16T10:38:11+08:00"
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
     },
     {
       "title": "Relativity CEO Says 2028 Server Deadline Stands; Will Prioritize Partnering with Frontier Labs Over Legal AI Companies",
@@ -458,7 +530,7 @@
       "source": "mofo",
       "kind": "insights",
       "firstSeenAt": "2026-11-16T00:23:56+08:00",
-      "lastSeenAt": "2026-11-16T10:38:11+08:00"
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
     },
     {
       "title": "How We Built Harvey’s Connector Library to Work Across External Tools",
@@ -485,7 +557,7 @@
       "source": "mofo",
       "kind": "insights",
       "firstSeenAt": "2026-11-16T00:23:56+08:00",
-      "lastSeenAt": "2026-11-16T10:38:11+08:00"
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
     },
     {
       "title": "Form PF Amendments Compliance Date Extension",
@@ -494,7 +566,7 @@
       "source": "mofo",
       "kind": "insights",
       "firstSeenAt": "2026-11-16T00:23:56+08:00",
-      "lastSeenAt": "2026-11-16T10:38:11+08:00"
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
     },
     {
       "title": "CFTC Proposes New CPO/CTA Registration Relief for Private Fund Advisers",
@@ -503,7 +575,7 @@
       "source": "mofo",
       "kind": "insights",
       "firstSeenAt": "2026-11-16T00:23:56+08:00",
-      "lastSeenAt": "2026-11-16T10:38:11+08:00"
+      "lastSeenAt": "2026-11-17T12:59:05+08:00"
     },
     {
       "title": "场外衍生工具产品第11类牌照：十大要点",
@@ -684,7 +756,7 @@
       "kind": "insights",
       "adapter": "kw",
       "url": "https://www.kingandwood.com/hk/zh/insights/latest-thinking.html",
-      "checkedAt": "2026-11-16T10:38:11+08:00",
+      "checkedAt": "2026-11-17T12:59:05+08:00",
       "status": "error",
       "lastSuccessAt": "2026-11-16T00:28:21+08:00",
       "error": "HTTPError"
@@ -695,9 +767,9 @@
       "kind": "insights",
       "adapter": "mofo",
       "url": "https://www.mofo.com/resources/insights?backurl=%2Fcapabilities%2Fprivate-funds%23insights&linkedcontent=Private%20Funds&practicetype=practices&q=Private%20Funds",
-      "checkedAt": "2026-11-16T10:38:11+08:00",
+      "checkedAt": "2026-11-17T12:59:05+08:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-16T10:38:11+08:00",
+      "lastSuccessAt": "2026-11-17T12:59:05+08:00",
       "received": 6
     },
     {
@@ -706,10 +778,10 @@
       "kind": "insights",
       "adapter": "charltons",
       "url": "https://www.charltonslaw.com.cn/fa-lv-jian-xun/xiang-gang-fa-xun/",
-      "checkedAt": "2026-11-16T10:38:11+08:00",
-      "status": "ok",
+      "checkedAt": "2026-11-17T12:59:05+08:00",
+      "status": "error",
       "lastSuccessAt": "2026-11-16T10:38:11+08:00",
-      "received": 12
+      "error": "URLError"
     },
     {
       "id": "harvey",
@@ -717,9 +789,9 @@
       "kind": "ai",
       "adapter": "harvey",
       "url": "https://www.harvey.ai/blog",
-      "checkedAt": "2026-11-16T10:38:11+08:00",
+      "checkedAt": "2026-11-17T12:59:05+08:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-16T10:38:11+08:00",
+      "lastSuccessAt": "2026-11-17T12:59:05+08:00",
       "received": 12
     },
     {
@@ -728,9 +800,9 @@
       "kind": "ai",
       "adapter": "legora",
       "url": "https://legora.com/newsroom",
-      "checkedAt": "2026-11-16T10:38:11+08:00",
+      "checkedAt": "2026-11-17T12:59:05+08:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-16T10:38:11+08:00",
+      "lastSuccessAt": "2026-11-17T12:59:05+08:00",
       "received": 12
     },
     {
@@ -739,9 +811,9 @@
       "kind": "ai",
       "adapter": "rss",
       "url": "https://www.artificiallawyer.com/feed/",
-      "checkedAt": "2026-11-16T10:38:11+08:00",
+      "checkedAt": "2026-11-17T12:59:05+08:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-16T10:38:11+08:00",
+      "lastSuccessAt": "2026-11-17T12:59:05+08:00",
       "received": 5
     },
     {
@@ -750,9 +822,9 @@
       "kind": "ai",
       "adapter": "rss",
       "url": "https://www.lawnext.com/feed",
-      "checkedAt": "2026-11-16T10:38:11+08:00",
+      "checkedAt": "2026-11-17T12:59:05+08:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-16T10:38:11+08:00",
+      "lastSuccessAt": "2026-11-17T12:59:05+08:00",
       "received": 12
     },
     {
@@ -761,11 +833,11 @@
       "kind": "ai",
       "adapter": "rss",
       "url": "https://www.legalfutures.co.uk/feed",
-      "checkedAt": "2026-11-16T10:38:11+08:00",
+      "checkedAt": "2026-11-17T12:59:05+08:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-16T10:38:11+08:00",
-      "received": 2
+      "lastSuccessAt": "2026-11-17T12:59:05+08:00",
+      "received": 3
     }
   ],
-  "updatedAt": "2026-11-16T10:38:11+08:00"
+  "updatedAt": "2026-11-17T12:59:05+08:00"
 }
