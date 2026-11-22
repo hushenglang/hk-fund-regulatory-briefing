@@ -1,7 +1,45 @@
 {
   "schemaVersion": 1,
-  "verifiedAt": "2026-11-16",
+  "verifiedAt": "2026-11-23",
   "items": [
+    {
+      "id": "hk-banking-misc-amendments-2026",
+      "jurisdiction": "香港",
+      "title": "《2026年银行业法例（杂项修订）条例》分阶段实施",
+      "updateDate": "2026-11-18",
+      "stage": "法案通过；待分阶段生效",
+      "stageRecord": "立法会于11月18日通过修订法案；修订条例自2027年1月1日起分阶段实施。",
+      "summary": "修订银行控股公司监管、专业人士聘用、执法条文及银行业三级制等，并涉及银行公会及金融机构处置法例。",
+      "businessFocus": "关注银行交易对手、基金托管和现金管理服务可能受到的间接影响；并非基金经理直接新增一般义务。",
+      "nextStep": "核实刊宪条文及各部分具体生效日期，按银行服务安排评估影响。",
+      "sources": [
+        {
+          "label": "HKMA 11月18日公布",
+          "url": "https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/11/20261118-4/"
+        }
+      ]
+    },
+    {
+      "id": "hk-usm-commencement-2026",
+      "jurisdiction": "香港",
+      "title": "香港无纸证券市场制度实施",
+      "updateDate": "2026-11-16",
+      "stage": "已实施",
+      "stageRecord": "2026年11月16日无纸证券市场制度正式实施；现有适用证券发行人按计划在五年内参与。",
+      "summary": "新上市适用证券须以无纸形式发行，现有证券按指定时间表参与；适用证券可包括部分获认可集体投资计划权益。",
+      "businessFocus": "核对基金认购、托管、持有人纪录及公司行动流程与无纸安排的衔接。",
+      "nextStep": "按证监会及港交所公布的参与日期逐项跟踪持仓，不把实施日等同于所有现有证券完成转换。",
+      "sources": [
+        {
+          "label": "SFC 无纸证券市场专题",
+          "url": "https://www.sfc.hk/en/Rules-and-standards/Uncertificated-Securities-Market"
+        },
+        {
+          "label": "HKEX 无纸证券市场专题",
+          "url": "https://www.hkex.com.hk/Services/Settlement-and-Depository/USM?sc_lang=en"
+        }
+      ]
+    },
     {
       "id": "hk-funds-tax-2026",
       "jurisdiction": "香港",
@@ -13,8 +51,14 @@
       "businessFocus": "关注基金架构、另类资产投资、附带权益分配及香港实质活动的证明材料，核对现有安排与最终条文的差异。",
       "nextStep": "跟踪恢复二读、通过及实施安排；政府表示如获通过，相关修订拟适用于2025/26及其后课税年度。",
       "sources": [
-        {"label": "香港政府 11月11日立法会答复", "url": "https://www.info.gov.hk/gia/general/202611/11/P2026111000414p.htm"},
-        {"label": "香港政府 草案刊宪说明", "url": "https://www.info.gov.hk/gia/general/202606/12/P2026061200200.htm"}
+        {
+          "label": "香港政府 11月11日立法会答复",
+          "url": "https://www.info.gov.hk/gia/general/202611/11/P2026111000414p.htm"
+        },
+        {
+          "label": "香港政府 草案刊宪说明",
+          "url": "https://www.info.gov.hk/gia/general/202606/12/P2026061200200.htm"
+        }
       ]
     },
     {
@@ -28,7 +72,10 @@
       "businessFocus": "关注房托投资退出、重组路径，以及物业注入上市房托的交易成本；尚未公布的细节须以正式草案为准。",
       "nextStep": "跟踪正式提交的法案文本及审议进度，分别核对私有化机制与印花税宽免的适用条件和生效安排。",
       "sources": [
-        {"label": "香港政府 财库局副局长立法会发言", "url": "https://www.info.gov.hk/gia/general/202611/06/P2026110600462.htm"}
+        {
+          "label": "香港政府 财库局副局长立法会发言",
+          "url": "https://www.info.gov.hk/gia/general/202611/06/P2026110600462.htm"
+        }
       ]
     },
     {
@@ -42,8 +89,14 @@
       "businessFocus": "关注面向境内投资者的基金推介、互联网营销材料、适当性流程及跨境展业安排；此处为草案进展。",
       "nextStep": "跟踪后续草案文本、审议及配套规则，核对资管机构和跨境服务的具体适用范围。",
       "sources": [
-        {"label": "上海市委金融办 转载新华社二审报道", "url": "https://jrj.sh.gov.cn/ZXYW178/20261103/f114ee1b00ea44e3bae59007631b1cb3.html"},
-        {"label": "中国证监会 初始草案公开征求意见说明", "url": "https://www.csrc.gov.cn/csrc/c100028/c7621153/content.shtml"}
+        {
+          "label": "上海市委金融办 转载新华社二审报道",
+          "url": "https://jrj.sh.gov.cn/ZXYW178/20261103/f114ee1b00ea44e3bae59007631b1cb3.html"
+        },
+        {
+          "label": "中国证监会 初始草案公开征求意见说明",
+          "url": "https://www.csrc.gov.cn/csrc/c100028/c7621153/content.shtml"
+        }
       ]
     },
     {
@@ -57,8 +110,14 @@
       "businessFocus": "关注美国封闭式产品与私募基金之间的配置和分销结构。这是一项持续跟踪的提案，不代表相关投资限制已经解除。",
       "nextStep": "继续核对国会后续行动、相关法案及是否通过；信息日期保留已核实节点，不以本次整理日期替代。",
       "sources": [
-        {"label": "Congress.gov 法案及程序记录", "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3671"},
-        {"label": "美国政府出版局 提案原文", "url": "https://www.govinfo.gov/content/pkg/BILLS-119s3671is/html/BILLS-119s3671is.htm"}
+        {
+          "label": "Congress.gov 法案及程序记录",
+          "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3671"
+        },
+        {
+          "label": "美国政府出版局 提案原文",
+          "url": "https://www.govinfo.gov/content/pkg/BILLS-119s3671is/html/BILLS-119s3671is.htm"
+        }
       ]
     }
   ]
