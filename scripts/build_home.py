@@ -87,3 +87,6 @@ build_intelligence(ROOT, DIST)
 
 from build_legislation import build_legislation
 build_legislation(ROOT, DIST)
+
+from build_workbench_v2 import build_workbench_v2
+build_workbench_v2(ROOT, DIST, catalog)
