@@ -1,0 +1,71 @@
+{
+  "periodId": "2026-11-22",
+  "regulatory": {
+    "title": "基础设施转型与风险管理并行，合规重点在于识别适用范围与落地节点",
+    "summary": "香港无纸证券市场已启动，银行业修订进入分阶段实施准备；代币化存款互联仍属探索，美国CAT重构仍属提案。与此同时，FATF名单更新要求持续检视地域风险。本期反映的方向是流程变革与风险筛查并进，而非所有新安排立即转化为基金管理人的直接义务。",
+    "analysis": "本期6项监管资料呈现两条主线：一是证券登记、支付结算与数据报送基础设施的调整；二是地域风险识别及跨境业务信息要求的持续落实。无纸证券市场的落地具有直接操作意义，但存量发行人仍有过渡安排；Swift与Project Ensemble的协作、SEC对CAT的重构则分别处于探索及征求意见阶段。银行业修订对基金管理人的影响，更应从银行及托管服务关系评估。建议将已实施规则、未来生效规则与研究提案分别管理，优先检查公司实际业务敞口，避免因新闻标题提前扩大义务范围。",
+    "sources": [
+      ["SFC：无纸证券市场", "https://www.sfc.hk/en/Rules-and-standards/Uncertificated-Securities-Market"],
+      ["HKMA：Swift与Project Ensemble协作", "https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/11/20261116-4/"],
+      ["HKMA：银行业修订法案获通过", "https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/11/20261118-4/"],
+      ["SFC：FATF相关反洗钱通函", "https://apps.sfc.hk/edistributionWeb/gateway/EN/circular/aml/doc?refNo=26EC77"],
+      ["SEC：CAT重构提案", "https://www.sec.gov/newsroom/press-releases/2026-117-sec-issues-proposal-restructure-consolidated-audit-trail"]
+    ]
+  },
+  "enforcement": {
+    "title": "披露、利益冲突与人员管理反复出现，控制能否被证据证明是关键",
+    "summary": "内地私募案例反复涉及合同履行、信息披露、适当性记录及关联方管理；香港终身禁业案突出人员诚信与资格核验；美国案件提示AI、外汇套利及假冒投顾包装下的募集风险。关注点应落在授权、信息真实性和可核验的执行记录。",
+    "analysis": "本期11项判例及执法资料中，多项内地私募监管措施指向日常治理缺口，尤其是披露与合同约定不一致、关联交易或利益冲突管理不足、人员信息与适当性档案不完整。杭州东翰雷火案例还涉及关联方混同、非员工参与投资管理及投资者差别待遇，说明治理边界与实际执行均需检视。香港人员虚假资历案提示诚信审查不能只依赖自我声明；美国涉嫌募集欺诈案件则提醒核验投资叙事与资金用途。上述材料支持开展针对性内控抽查，但不能据此推断整体执法趋严；内地个案不直接等同香港法定义务，美国指控也不等于最终裁定。",
+    "sources": [
+      ["SFC：Kim Chung Wan终身禁业", "https://apps.sfc.hk/edistributionWeb/gateway/EN/news-and-announcements/news/doc?refNo=26PR195"],
+      ["浙江证监局：杭州东翰雷火监管措施", "https://www.csrc.gov.cn/zhejiang/c103952/c7671757/content.shtml"],
+      ["本期完整判例及执法资料", "archive/2026-11-22-cases.html"]
+    ]
+  },
+  "focus": [
+    {
+      "id": "change", "title": "先确认业务关联，再确定调整范围",
+      "summary": "核对无纸证券、银行及托管安排与现有产品和交易的交集；将代币化探索、CAT提案及长期立法跟踪单列观察。",
+      "action": "形成适用性清单，记录相关主体、规则状态、生效节点、业务影响及所需服务机构确认；没有实际敞口的事项保留跟踪。",
+      "sources": [["本期监管更新", "archive/2026-11-22-regulatory.html"], ["持续立法跟踪（含此前材料）", "legislation.html"]]
+    },
+    {
+      "id": "controls", "title": "把案例转化为可抽查的控制点",
+      "summary": "聚焦披露与合同一致性、利益冲突、人员资格及适当性留痕，识别制度要求与实际操作之间的差距。",
+      "action": "以现有销售、员工操守及AML/KYC监控为基础，拟定一轮有针对性的样本复核；记录发现、整改责任及关闭证据。",
+      "sources": [["本期判例及执法", "archive/2026-11-22-cases.html"], ["现有合规事项备忘", "compliance.html"]]
+    },
+    {
+      "id": "ai", "title": "法律AI的使用边界应先于规模扩张",
+      "summary": "近7天资讯中，Harvey关于留存、法律保留及审计日志的产品更新，提示AI应用应同时考虑信息治理与人工复核；产品功能不代表公司已满足相关要求。",
+      "action": "拟定法律AI试点边界：允许输入的数据、工具权限、结果复核人及留存方式；优先使用公开材料，敏感资料另行评估。",
+      "sources": [["Harvey：Information Governance", "https://www.harvey.ai/blog/information-governance-in-harvey"], ["近7天四位一体资讯", "intelligence.html"]]
+    }
+  ],
+  "strategies": [
+    {
+      "title": "以业务风险决定合规资源配置",
+      "summary": "优先保障投资者保护、募集及销售、利益冲突和反洗钱等核心控制；以实际敞口、潜在影响及实施时点决定优先级，避免对各类资讯平均投入资源。",
+      "outcome": "将有限资源集中于能够降低重大法律及合规风险的事项。",
+      "sources": [["本期判例及执法", "archive/2026-11-22-cases.html"], ["FATF相关通函", "https://apps.sfc.hk/edistributionWeb/gateway/EN/circular/aml/doc?refNo=26EC77"]]
+    },
+    {
+      "title": "采用分阶段的业务变革应对机制",
+      "summary": "对已落地规则完成业务衔接；对已确定未来实施的变化提前准备；对咨询、探索及立法提案维持观察。在支持业务创新的同时，按明确触发条件决定何时调整制度与流程。",
+      "outcome": "兼顾业务响应速度与合规确定性，减少过早或滞后的制度调整。",
+      "sources": [["本期监管更新", "archive/2026-11-22-regulatory.html"], ["持续立法跟踪", "legislation.html"]]
+    },
+    {
+      "title": "从制度完备转向控制有效性与问责",
+      "summary": "以可验证的执行结果衡量合规质量，将披露、授权、人员管理与服务机构监督纳入统一的证据要求；对重大缺口建立升级、整改及复核机制。",
+      "outcome": "让管理层能够识别关键缺口，并判断问题是否实际得到解决。",
+      "sources": [["本期执法材料", "archive/2026-11-22-cases.html"], ["年度合规监控计划", "compliance.html"]]
+    },
+    {
+      "title": "在可控范围内推进法律合规数字化",
+      "summary": "把知识检索、公开资讯归纳等低敏感场景作为AI应用起点，将数据保密、权限、留存和专业复核作为扩展前提；由法规部保留最终判断和对外意见责任。",
+      "outcome": "在提升处理效率的同时，维持专业判断质量与信息治理边界。",
+      "sources": [["近7天法律AI资讯", "intelligence.html"], ["Harvey信息治理功能说明", "https://www.harvey.ai/blog/information-governance-in-harvey"]]
+    }
+  ]
+}
