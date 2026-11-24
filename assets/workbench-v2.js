@@ -21,7 +21,7 @@ for(const box of document.querySelectorAll('[data-discussion]')){
     const analysis=[...panel.querySelectorAll('h2,h3,p')].filter(e=>!box.contains(e)).map(e=>e.textContent).join('\n\n');
     const notes=entries.map(e=>`${e.time} ${e.agreement}\n${e.text}`).join('\n\n');
     const draft=input.value.trim();
-    const text=`请根据以下本期分析与我的意见继续讨论。\n期间：${box.dataset.period}\n模块：${panel.querySelector('h2').textContent}\n\n${analysis}\n\n引用来源：\n${[...panel.querySelectorAll('.evidence a')].map(a=>a.textContent+' '+a.href).join('\n')}\n\n已保存的意见：\n${notes||'暂无'}${draft?'\n\n当前意见草稿：'+agreement+'\n'+draft:''}`;
+    const text=`请根据以下本期分析与我的意见继续讨论。\n期间：${box.dataset.period}\n模块：${panel.querySelector('h2').textContent}\n\n${analysis}\n\n引用来源：\n${[...panel.querySelectorAll('.evidence a,.trace-evidence a')].map(a=>a.textContent+' '+a.href).join('\n')}\n\n已保存的意见：\n${notes||'暂无'}${draft?'\n\n当前意见草稿：'+agreement+'\n'+draft:''}`;
     try{await navigator.clipboard.writeText(text);status.textContent='已复制，可粘贴到当前聊天继续讨论。';}catch{status.textContent='未能复制，请允许浏览器访问剪贴板后重试。';}
   });
   choices();render();
