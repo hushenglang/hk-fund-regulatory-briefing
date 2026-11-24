@@ -96,3 +96,6 @@ build_workbench_layout(ROOT, DIST, catalog)
 
 from build_workbench_reasoning import enrich_workbench_layout
 enrich_workbench_layout(ROOT, DIST)
+
+from publish_workbench import publish_workbench
+publish_workbench(DIST)

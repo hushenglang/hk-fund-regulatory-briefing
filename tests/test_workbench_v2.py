@@ -27,7 +27,7 @@ class WorkbenchTests(unittest.TestCase):
 
     def test_build_preserves_original_and_does_not_reuse_stale_analysis(self):
         catalog=sorted(json.loads((ROOT/'reports/catalog.json').read_text()),key=lambda i:i['periodEnd'],reverse=True)
-        original=ROOT/'dist/dashboard.html'
+        original=ROOT/'dist/dashboard-classic.html'
         before=hashlib.sha256(original.read_bytes()).hexdigest()
         with tempfile.TemporaryDirectory() as tmp:
             dist=Path(tmp);(dist/'assets').mkdir();(dist/'archive').mkdir()

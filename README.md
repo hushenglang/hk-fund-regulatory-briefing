@@ -109,3 +109,7 @@ python3 scripts/build_home.py
 `workbench-layout-preview.html` 是单独的布局方案，保留现有 `workbench-v2.html`。概览加入七步流程、两排趋势与行动摘要、右侧合规备忘、六类知识库入口及每日复盘。`data/workbench-layout-analysis.json` 保存供审核的业务化表述，合同库现已收录首批公开参考资料；培训库提供基于来源编制的提纲草稿，待部门复核。历史材料与未注明日期的资料分别标注，未新增抓取或推送任务。合同按香港优先、内地、美国组织，培训按前台与法规部组织。审核稿的反馈与当前版本分别保存在浏览器本地。
 
 `data/workbench-reasoning.json` 明确记录知识库来源、判断、策略及培训提纲的关联。每项判断引用来源ID，每项策略引用判断ID；构建时拒绝缺失关联。观察项可以没有策略，策略不能没有判断。当前页面提供策略跳转判断、判断查看原始来源，以及执行建议回看策略的入口；所有建议保持待确认状态。
+
+## 正式更新版工作台
+
+`dashboard.html` 与 `workbench.html` 均展示已确认的更新版：概览及七个工作模块、六类知识库、可追溯的判断与策略。`scripts/publish_workbench.py` 在构建最后执行，保留原卡片式工作台为 `dashboard-classic.html`，此前的七模块版本保留在 `workbench-v2.html`；`index.html` 继续展示最新汇总简报及历史导航。合同及培训正式入口分别为 `contract-library.html` 与 `training-library.html`；培训提纲仍标注待部门复核，策略和执行建议仍待确认。新版与已确认预览沿用同一浏览器反馈存储，原版每日待办状态照常保留。

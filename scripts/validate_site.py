@@ -96,7 +96,7 @@ print(f'Intelligence validated: {len(urls)} unique sourced headlines')
 # Fixed six-module workbench order and attributed legislative records.
 from build_legislation import legislation_data
 from html import unescape
-board=(DIST/'dashboard.html').read_text()
+board=(DIST/'dashboard-classic.html').read_text()
 headings=[unescape(re.sub('<[^>]+>','',m)) for m in re.findall(r'<h2\b[^>]*>(.*?)</h2>',board,re.S)]
 expected=['\u7acb\u6cd5\u52a8\u6001','\u5224\u4f8b\u53ca\u6267\u6cd5','\u76d1\u7ba1\u66f4\u65b0','\u56db\u4f4d\u4e00\u4f53','\u5408\u89c4\u4e8b\u9879\u5907\u5fd8','\u6bcf\u65e5\u5f85\u529e']
 assert headings==expected, headings
@@ -108,7 +108,18 @@ for item in legislation['items']:
     assert item['stage'] and item['stageRecord'] and item['nextStep']
     for source in item['sources']:
         assert source['url'] in legislation_html, 'Lost legislative source'
-print('Workbench order and legislative source attribution verified')
+print('Classic workbench order and legislative source attribution verified')
+
+# Approved workbench is the default; report index remains the latest report.
+board=(DIST/'dashboard.html').read_text()
+assert board==(DIST/'workbench.html').read_text(), 'Default workbench differs from approved edition'
+assert '>布局方案</span>' not in board and 'contract-library-preview.html' not in board
+assert 'href="dashboard-classic.html"' in board
+board_doc=Document(board)
+assert {n.attrs['data-panel'] for n in board_doc.nodes if 'data-panel' in n.attrs}=={'overview','purpose','standards','knowledge','judgment','strategy','execution','review'}
+knowledge=next(n for n in board_doc.nodes if n.attrs.get('data-panel')=='knowledge')
+assert sum(n.tag=='a' and bool(n.attrs.get('data-detail')) and knowledge.start<n.start<knowledge.end for n in board_doc.nodes)==6
+print('Updated default workbench, six knowledge modules and classic return link verified')
 
 from build_compliance import compliance_data
 compliance=compliance_data(ROOT)
