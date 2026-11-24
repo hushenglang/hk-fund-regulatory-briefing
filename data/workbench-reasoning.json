@@ -1,0 +1,238 @@
+{
+  "periodId": "2026-11-22",
+  "reviewedAt": "2026-11-24",
+  "knowledge": [
+    {
+      "id": "K1",
+      "module": "监管更新",
+      "title": "香港无纸证券市场",
+      "publisher": "香港证监会",
+      "date": "2026-11-16实施",
+      "kind": "官方制度说明",
+      "region": "香港",
+      "url": "https://www.sfc.hk/en/Rules-and-standards/Uncertificated-Securities-Market",
+      "fact": "制度已启动，新上市适用证券与存量证券采用不同参与安排。"
+    },
+    {
+      "id": "K2",
+      "module": "判例及执法",
+      "title": "杭州东翰雷火警示函",
+      "publisher": "浙江证监局",
+      "date": "2026-11-06决定；本期公开",
+      "kind": "行政监管措施",
+      "region": "内地",
+      "url": "https://www.csrc.gov.cn/zhejiang/c103952/c7671757/content.shtml",
+      "fact": "涉及关联方混同、利益冲突披露不足及不公平对待投资者。"
+    },
+    {
+      "id": "K3",
+      "module": "判例及执法",
+      "title": "北京淳信资本警示函",
+      "publisher": "北京证监局",
+      "date": "2026-11-12决定；本期公开",
+      "kind": "行政监管措施",
+      "region": "内地",
+      "url": "https://www.csrc.gov.cn/beijing/c105547/c7672000/content.shtml",
+      "fact": "本期材料涉及合同披露及适当性资料保存问题。"
+    },
+    {
+      "id": "C1",
+      "module": "合同模块",
+      "title": "香港私募基金的合同主体与客户协议适用问题",
+      "publisher": "Simmons & Simmons",
+      "date": "2016-04-28",
+      "kind": "律所历史研究",
+      "region": "香港",
+      "url": "https://www.simmons-simmons.com/publications/ck0aslksmnlnj0b36kdxmkl2g/28-the-impact-of-the-sfcs-new-client-agreement-requirements-on-private-fund-managers",
+      "fact": "文章区分管理人与基金、基金与投资者之间的不同合同关系。",
+      "summary": "可用于梳理谁与谁签约、管理协议与认购文件如何衔接。",
+      "pitfall": "只看文件名称，忽略签约主体、身份和服务对象。",
+      "check": "按主体列出管理、认购与侧函文件；另行核实现行监管义务。",
+      "scope": "历史材料，仅用于合同关系辨识；不沿用文中对当时适当性规则的结论。",
+      "stages": "募／管",
+      "reviewedAt": "2026-11-24"
+    },
+    {
+      "id": "C2",
+      "module": "合同模块",
+      "title": "涉外对赌回购纠纷的若干问题",
+      "publisher": "金杜律师事务所",
+      "date": "原文未明确标注日期",
+      "kind": "律所案件经验",
+      "region": "内地",
+      "url": "https://www.kingandwood.com/cn/zh/insights/latest-thinking/key-issues-in-cross-border-valuation-adjustment-mechanism-repurchase-disputes.html",
+      "fact": "律所归纳其涉外回购仲裁经验，讨论触发条件、责任主体和多项救济的关系。",
+      "summary": "从退出条款起草与争议处理两端，识别约定权利与实际回收之间的差距。",
+      "pitfall": "把写入协议的回购承诺直接等同于可回收的现金。",
+      "check": "逐项核对触发条件、义务人、保证安排、通知和执行路径。",
+      "scope": "内地／涉外仲裁经验，非统一裁判规则，不直接套用香港项目。",
+      "stages": "投／管／退",
+      "reviewedAt": "2026-11-24"
+    },
+    {
+      "id": "C3",
+      "module": "合同模块",
+      "title": "侧函与最惠国条款：承诺跟踪及选择程序",
+      "publisher": "Morgan Lewis",
+      "date": "原文未明确标注日期",
+      "kind": "律所实务参考",
+      "region": "美国",
+      "url": "https://www.morganlewis.com/~/media/files/special-topics/vcpefdeskbook/fundformation/vcpefdeskbook_sidelettersandmostfavorednations.ashx",
+      "fact": "实务材料讨论侧函与基金其他文件的冲突，以及MFN选择和承诺记录。",
+      "summary": "适合作为侧函承诺台账、跨文件检查与MFN流程的讨论材料。",
+      "pitfall": "单份侧函看似可行，但新增承诺可能影响其他投资者的权利。",
+      "check": "记录受益投资者、承诺内容、例外与选择程序，并与主要文件对照。",
+      "scope": "美国／国际基金实务背景；历史材料中的监管描述不作现行规则依据。",
+      "stages": "募／管",
+      "reviewedAt": "2026-11-24"
+    }
+  ],
+  "judgments": [
+    {
+      "id": "J1",
+      "key": "usm",
+      "category": "监管趋势",
+      "title": "香港证券登记与持有方式向无纸化转型",
+      "observation": "从纸质凭证转向电子登记是本期明确落地的市场基础设施变化，存量证券分阶段参与。",
+      "impact": "涉及香港上市证券的基金，其持有、登记及公司行动流程可能受影响；影响取决于证券及托管安排。",
+      "qualification": "属制度转型判断；不等于所有持仓已同日转换。",
+      "sourceIds": [
+        "K1"
+      ]
+    },
+    {
+      "id": "J2",
+      "key": "controls",
+      "category": "执法关注点",
+      "title": "本期内地私募执法样本集中涉及披露、合同履行与利益冲突管理",
+      "observation": "多项监管措施反映日常治理及投资者保护问题反复出现。",
+      "impact": "可用于检视募集披露、投资者档案及关联方管理的控制设计与执行证据。",
+      "qualification": "仅是本期样本观察；不足以判断长期执法力度，具体义务须按业务活动及法域另行判断。",
+      "sourceIds": [
+        "K2",
+        "K3"
+      ]
+    },
+    {
+      "id": "J3",
+      "key": "sideletters",
+      "category": "合同实践观察",
+      "title": "侧函使合同风险呈现跨文件、跨投资者的联动性",
+      "observation": "基金文件及侧函共同构成承诺；MFN等安排可能将一名投资者的优惠延伸至其他投资者。",
+      "impact": "若基金存在侧函，单独审核一份协议可能遗漏其他文件的限制及连带履行义务。",
+      "qualification": "实务风险归纳，非本周新增监管要求；须按具体协议及法域判断。",
+      "sourceIds": [
+        "C1",
+        "C3"
+      ]
+    },
+    {
+      "id": "J4",
+      "key": "exit",
+      "category": "合同实践观察",
+      "title": "退出条款的可履行性与责任主体影响投资回收",
+      "observation": "律所回购纠纷经验提示，条款触发、责任主体和执行环节会影响救济效果。",
+      "impact": "存在回购或约定退出安排的投资，需区分合同权利与可实现的退出路径。",
+      "qualification": "基于内地涉外仲裁经验的推论，不代表香港统一裁判结论。",
+      "sourceIds": [
+        "C2"
+      ]
+    }
+  ],
+  "strategies": [
+    {
+      "id": "S1",
+      "title": "分阶段适配无纸化市场，优先保障现有基金运作",
+      "judgmentIds": [
+        "J1"
+      ],
+      "rationale": "制度变化影响证券持有和服务机构流程，适合按基金敞口与证券参与时间安排资源。",
+      "condition": "适用于持有或拟投资相关香港上市证券的基金。",
+      "action": "列出相关基金和证券，向托管行确认登记及公司行动影响，记录需调整的流程。"
+    },
+    {
+      "id": "S2",
+      "title": "围绕披露、合同履行与利益冲突开展定向抽查",
+      "judgmentIds": [
+        "J2"
+      ],
+      "rationale": "本期案例暴露的是具体治理缺口，针对相关控制检查比笼统增加制度更有针对性。",
+      "condition": "先映射公司的产品、法域和业务模式，确认可借鉴的控制点。",
+      "action": "选取样本对照合同披露、投资者档案和关联交易记录；发现问题后再确定整改责任。"
+    },
+    {
+      "id": "S3",
+      "title": "把基金文件与侧函纳入统一承诺管理",
+      "judgmentIds": [
+        "J3"
+      ],
+      "rationale": "风险来自文件及投资者权利的联动，因此应同时管理跨文件一致性和后续履行。",
+      "condition": "适用于使用侧函、MFN或个别投资者特殊安排的基金。",
+      "action": "建立文件及侧函承诺台账，记录受益人、责任方、MFN触发及履行节点。"
+    },
+    {
+      "id": "S4",
+      "title": "将退出可行性审查前移至投资与投后管理",
+      "judgmentIds": [
+        "J4"
+      ],
+      "rationale": "退出救济受条款设计及责任安排影响，宜在谈判和投后阶段持续评估。",
+      "condition": "适用于约定回购、保证或其他退出保障的交易；按适用法另行核实。",
+      "action": "梳理触发条件、责任主体、通知与保证安排，建立投后监测和退出准备清单。"
+    }
+  ],
+  "training": [
+    {
+      "id": "T1",
+      "title": "无纸证券市场：哪些基金业务环节可能受影响",
+      "audiences": [
+        "前台同事",
+        "法规部"
+      ],
+      "status": "培训提纲草稿 · 待复核",
+      "sourceIds": [
+        "K1"
+      ],
+      "objectives": [
+        "区分制度变化、业务影响和执行动作。",
+        "结合产品与托管安排讨论适用范围。"
+      ],
+      "exercise": "选择一类香港上市证券持仓，讨论需向托管行确认哪些事项。"
+    },
+    {
+      "id": "T2",
+      "title": "侧函承诺：从签约主体到MFN履行",
+      "audiences": [
+        "前台同事",
+        "法规部"
+      ],
+      "status": "培训提纲草稿 · 待复核",
+      "sourceIds": [
+        "C1",
+        "C3"
+      ],
+      "objectives": [
+        "识别签约及受益主体。",
+        "讨论跨文件承诺、例外和后续履行的记录方式。"
+      ],
+      "exercise": "用匿名假设场景识别新增侧函是否影响已有投资者权利。"
+    },
+    {
+      "id": "T3",
+      "title": "回购与退出：合同约定如何转化为可执行的准备",
+      "audiences": [
+        "法规部",
+        "前台同事"
+      ],
+      "status": "培训提纲草稿 · 待复核",
+      "sourceIds": [
+        "C2"
+      ],
+      "objectives": [
+        "区分退出权利、责任主体及履行条件。",
+        "识别通知、证据和跨境执行需要提前准备的事项。"
+      ],
+      "exercise": "依据文章列一个退出安排问题清单，并讨论香港项目哪些结论不能直接照搬。"
+    }
+  ]
+}
