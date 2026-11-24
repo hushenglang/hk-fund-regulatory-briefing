@@ -90,3 +90,6 @@ build_legislation(ROOT, DIST)
 
 from build_workbench_v2 import build_workbench_v2
 build_workbench_v2(ROOT, DIST, catalog)
+
+from build_workbench_layout import build_workbench_layout
+build_workbench_layout(ROOT, DIST, catalog)
