@@ -61,3 +61,20 @@ footer{margin-top:12px;color:#99a3b2;font-size:10px}
 .overview-grid>.card{min-height:270px}.overview-grid .monthly-memo{padding:16px 18px}.overview-grid .monthly-memo .memo-list{margin-top:8px}.overview-grid .memo-list li{padding:4px 0;line-height:1.5}.overview-grid .memo-list span{line-height:1.5}.overview-grid .memo-list .memo-subtitle{padding:3px 0 1px}
 @media print{.overview-grid>.card{min-height:0}}
 footer{margin-top:10px}
+/* Judgment and strategy use the same compact row language as execution. */
+.appbar{height:54px}
+.review-table{table-layout:fixed;min-width:740px}
+.review-table th,.review-table td{padding:12px 16px}
+.review-table th:first-child,.review-table td:first-child{width:28%}
+.review-table th:nth-child(2),.review-table td:nth-child(2){width:57%}
+.review-table th:last-child,.review-table td:last-child{width:15%}
+.review-table h3{font-size:13px;font-weight:600;line-height:1.65;margin:5px 0 0}
+.review-table p{font-size:12px;line-height:1.8;margin:0}
+.review-table .outcome{border:0;padding:0;margin-top:5px;color:#718199}
+.review-table .outcome strong{display:inline;font-weight:500;margin:0}
+.review-table details{font-size:11px;color:#60758e;margin-top:6px}
+.review-table td:last-child details{margin-top:2px}
+.review-table summary{cursor:pointer;color:var(--accent)}
+.review-table .full-analysis p{padding-top:8px}
+.review-table .evidence{font-size:11px;margin:8px 0 0;padding-left:14px;overflow-wrap:anywhere}
+@media(max-width:700px){.appbar{height:54px}.review-table th,.review-table td{padding:10px 12px}}

@@ -20,10 +20,19 @@ def source_html(item):
     return '<ul class="evidence">'+''.join(f'<li><a href="{escape(url,quote=True)}" target="_blank" rel="noopener noreferrer">{escape(title)}</a></li>' for title,url in item.get('sources',[]))+'</ul>'
 
 
-def analysis_card(item,label,body='summary'):
-    text=f'<p>{escape(item["summary"])}</p>'
-    if body=='analysis':text+=f'<details class="full-analysis"><summary>展开完整分析</summary><p>{escape(item["analysis"])}</p></details>'
-    return f'<article class="card"><span class="tag">{label}</span><h3>{escape(item["title"])}</h3>{text}'+ (f'<p class="outcome"><strong>预期效果：</strong>{escape(item["outcome"])}</p>' if item.get('outcome') else '')+f'<details><summary>材料依据</summary>{source_html(item)}</details></article>'
+def analysis_table(items,strategy=False):
+    rows=[]
+    for item,label in items:
+        text=f'<p>{escape(item["summary"])}</p>'
+        if item.get('analysis'):
+            text+=f'<details class="full-analysis"><summary>展开完整分析</summary><p>{escape(item["analysis"])}</p></details>'
+        if item.get('outcome'):
+            text+=f'<p class="outcome"><strong>预期效果：</strong>{escape(item["outcome"])}</p>'
+        evidence=f'<details><summary>{len(item.get("sources",[]))}项材料</summary>{source_html(item)}</details>'
+        rows.append(f'<tr><td><span class="tag">{label}</span><h3>{escape(item["title"])}</h3></td><td>{text}</td><td>{evidence}</td></tr>')
+    heading='策略方向' if strategy else '判断事项'
+    detail='建议及预期效果' if strategy else '分析与建议'
+    return f'<div class="table-wrap"><table class="review-table" aria-label="本期{heading}列表"><thead><tr><th scope="col">{heading}</th><th scope="col">{detail}</th><th scope="col">材料依据</th></tr></thead><tbody>'+''.join(rows)+'</tbody></table></div>'
 
 
 def knowledge_cards(dashboard):
@@ -78,9 +87,9 @@ def build_workbench_v2(root,dist,catalog):
     analysis=json.loads((root/'data/workbench-analysis.json').read_text())
     current=analysis['periodId']==weekly['id']
     if current:
-        trends=''.join(analysis_card(analysis[k],label,'analysis') for k,label in [('regulatory','监管趋势'),('enforcement','执法趋势')])
-        focuses=''.join(analysis_card(i,'建议关注点') for i in analysis['focus'])
-        strategies=''.join(analysis_card(i,'策略建议 · 待确认') for i in analysis['strategies'])
+        trends=analysis_table([(analysis[k],label) for k,label in [('regulatory','监管趋势'),('enforcement','执法趋势')]]+[(i,'建议关注点') for i in analysis['focus']])
+        focuses=''
+        strategies=analysis_table([(i,'策略建议 · 待确认') for i in analysis['strategies']],strategy=True)
         overview=''.join(f'<article class="card overview-trend"><div class="section-heading"><h2>{label}</h2><button class="text-button" data-open="judgment">查看分析</button></div><h3>{escape(analysis[k].get("overviewTitle",analysis[k]["title"]))}</h3><p>{escape(analysis[k].get("overviewSummary",analysis[k]["summary"]))}</p></article>' for k,label in [('regulatory','监管趋势'),('enforcement','执法趋势')])
         overview+='<article class="card"><div class="section-heading"><h2>建议关注点</h2><button class="text-button" data-open="judgment">查看详情</button></div><ul class="overview-list">'+''.join(f'<li><strong>{escape(i["title"])}</strong></li>' for i in analysis['focus'])+'</ul></article>'
         overview+='<article class="card"><div class="section-heading"><h2>策略方向</h2><button class="text-button" data-open="strategy">查看详情</button></div><ul class="overview-list">'+''.join(f'<li><strong>{escape(i["title"])}</strong></li>' for i in analysis['strategies'])+'</ul></article>'
